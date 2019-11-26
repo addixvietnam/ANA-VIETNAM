@@ -1,6 +1,10 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/19 10:01:04 GMT                                               *
+*Start time:                                     2019/11/26 09:39:49 GMT                                               *
 ************************************************************************************************************************
+
+D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+
+Starting init ana Project
 
 Reading from input excel file
 
@@ -11,9 +15,11 @@ Adding data to website object (use hashmap)
 
 Adding data to element of website (use hashmap)
 
+Adding data to keyword of website (use array)
+
 Finished init ana Project
 
 ************************************************************************************************************************
-*End time:                                       2019/11/19 10:01:04 GMT                                               *
+*End time:                                       2019/11/26 09:39:49 GMT                                               *
 ************************************************************************************************************************
 

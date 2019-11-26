@@ -3,8 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/MyProjects/Sources/Netbeans/ANA-ADDIX/src/ana/controller/UrlItem.java</file>
-            <file>file:/D:/MyProjects/Sources/Netbeans/ANA-ADDIX/src/ana/Ana.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/model/Keyword.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/model/WebsiteData.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/TextFile.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/controller/WebsiteData_Controller.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/AddixExcel.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/MyUtil.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/Ana.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/GlobalVars.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/AddixText.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/model/WebsiteInProject.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/model/Website.java</file>
+            <file>file:/D:/MyProjects/Sources/11.%20ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/src/ana/model/WebsiteElement.java</file>
         </group>
     </open-files>
 </project-private>

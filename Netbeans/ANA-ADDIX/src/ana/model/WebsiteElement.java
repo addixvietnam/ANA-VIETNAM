@@ -17,6 +17,25 @@ public class WebsiteElement {
     private int numClickSort = 0;
     private String strPaging = "";
     private int type = 1;
+    private int saveMethod = 1;
+    private int numReadPage = 1;    
+    private String itemPageElement = "";
+
+    public int getSaveMethod() {
+        return saveMethod;
+    }
+
+    public void setSaveMethod(int saveMethod) {
+        this.saveMethod = saveMethod;
+    }
+
+    public int getNumReadPage() {
+        return numReadPage;
+    }
+
+    public void setNumReadPage(int numReadPage) {
+        this.numReadPage = numReadPage;
+    }
 
     public WebsiteElement() {
     }
@@ -24,7 +43,7 @@ public class WebsiteElement {
     public WebsiteElement(int idWebsite, int id, String href, String title, String postDate,
             String source, String content, int numClickSearch, String strNextPage,
             String domain, String strReplaceNextPage, int caseDisplay, 
-            int numClickSort, String strPaging, int type) {
+            int numClickSort, String strPaging, int type, int saveMethod, int numReadPage, String itemPageElement) {
         this.idWebsite = idWebsite;
         this.id = id;
         this.href = href;
@@ -40,29 +59,17 @@ public class WebsiteElement {
         this.numClickSort = numClickSort;
         this.strPaging = strPaging;           
         this.type = type;  
+        this.saveMethod = saveMethod;
+        this.numReadPage = numReadPage;        
+        this.itemPageElement = itemPageElement;
     }
-    
-    
 
-    public void addWebsiteElement(int idWebsite, int id, String href, String title, String postDate,
-            String source, String content, int numClickSearch, String strNextPage,
-            String domain, String strReplaceNextPage, int caseDisplay, 
-            int numClickSort, String strPaging, int type){
-        this.idWebsite = idWebsite;
-        this.id = id;
-        this.href = href;
-        this.title = title;
-        this.postDate = postDate;
-        this.source = source;
-        this.content = content;
-        this.numClickSearch = numClickSearch;
-        this.strNextPage = strNextPage;
-        this.domain = domain;
-        this.strReplaceNextPage = strReplaceNextPage;
-        this.caseDisplay = caseDisplay;
-        this.numClickSort = numClickSort;
-        this.strPaging = strPaging;
-        this.type = type;        
+    public String getItemPageElement() {
+        return itemPageElement;
+    }
+
+    public void setItemPageElement(String itemPageElement) {
+        this.itemPageElement = itemPageElement;
     }
 
     public int getId() {

@@ -17,9 +17,8 @@ import java.util.logging.Logger;
  *
  * @author Nhan.Lam
  */
-public class TextFile extends AddixText{
+public class TextFile {
 
-    @Override
     public void writeText(String fileName, String content)throws IOException{
         try {
             BufferedWriter bufferedWriter = new BufferedWriter

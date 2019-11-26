@@ -5,7 +5,7 @@ public class WebsiteData {
     private int idKeyword;    
     //--------------- data for report
     private int rank;
-    private String webName = "";
+    private String webName = "";    
     private String urlListTab = "";
     private String keyword = "";
     private String urlArticle = "";
@@ -14,12 +14,38 @@ public class WebsiteData {
     private String source = "";
     private String allText = "";
     private String urlUploadServer = "";
+
+    public WebsiteData(String webName, String urlListTab, String keyword, String urlArticle, String title) {
+        this.webName = webName;
+        this.urlListTab = urlListTab;
+        this.keyword = keyword;
+        this.urlArticle = urlArticle;
+        this.title = title;
+    }
+
+    
+    public WebsiteData(int rank, String webName,
+            String urlListTab, String keyword, String urlArticle, String title,
+            String postDate, String source, String allText, String urlUploadServer) {
+        this.rank = rank;
+        this.webName = webName;
+        this.urlListTab = urlListTab;
+        this.keyword = keyword;
+        this.urlArticle = urlArticle;
+        this.title = title;
+        this.postDate = postDate;
+        this.source = source;
+        this.allText = allText;
+        this.urlUploadServer = urlUploadServer;
+    }
+    
+    
     
     public void addWebsiteData(int idWebsite, int idKeyword, int rank, String webName,
             String urlListTab, String keyword, String urlArticle, String title,
             String postDate, String source, String allText, String urlUploadServer){
-        this.idWebsite = idWebsite;
-        this.idKeyword = idKeyword;
+//        this.idWebsite = idWebsite;
+//        this.idKeyword = idKeyword;
         this.rank = rank;
         this.webName = webName;
         this.urlListTab = urlListTab;

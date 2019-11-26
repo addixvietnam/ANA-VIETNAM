@@ -1,6 +1,11 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/19 10:13:16 GMT                                               *
+*Start time:                                     2019/11/26 09:41:40 GMT                                               *
 ************************************************************************************************************************
+
+WORKING DIRECTORY:
+	D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+
+Starting init ana Project
 
 Reading from input excel file
 
@@ -11,14 +16,11 @@ Adding data to website object (use hashmap)
 
 Adding data to element of website (use hashmap)
 
-========================================================================================================================
-Error Read Input Excel Error (D:\MyProjects\Sources\Netbeans\ANA-ADDIX\input\input.xlsx)
-Date: 2019/11/19 10:13:17 GMT
-   java.lang.NumberFormatException: For input string: "#main > article > section"
+Adding data to keyword of website (use array)
 
-========================================================================================================================
+Finished init ana Project
 
 ************************************************************************************************************************
-*End time:                                       2019/11/19 10:13:17 GMT                                               *
+*End time:                                       2019/11/26 09:41:41 GMT                                               *
 ************************************************************************************************************************
 
