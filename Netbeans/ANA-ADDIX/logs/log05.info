@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/26 09:42:15 GMT                                               *
+*Start time:                                     2019/11/26 11:54:29 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,46 +7,21 @@ WORKING DIRECTORY:
 
 Starting init ana Project
 
-Reading from input excel file
-
-Finished reading input excel file.
-Adding data to project (use hashmap)
-
-Adding data to website object (use hashmap)
-
-Adding data to element of website (use hashmap)
-
-Adding data to keyword of website (use array)
-
 Finished init ana Project
 
-Starting ANA-1 Project. Start time: 2019/11/26 09:42:15 GMT
+Starting ANA-1 Project. Start time: 2019/11/26 11:54:29 GMT
 
-Reading all old data with website is ainow. Start time: 2019/11/26 09:42:15 GMT
+Reading all old data with website is ainow. Start time: 2019/11/26 11:54:29 GMT
 
-Reading old data with keyword is AI. Start time: 2019/11/26 09:42:15 GMT
+End reading all old data with website is ainow. End time: 2019/11/26 11:54:29 GMT
 
-End reading old data with keyword is AI. End time: 2019/11/26 09:42:15 GMT
-
-Reading old data with keyword is IoT. Start time: 2019/11/26 09:42:15 GMT
-
-End reading old data with keyword is IoT. End time: 2019/11/26 09:42:15 GMT
-
-End reading all old data with website is ainow. End time: 2019/11/26 09:42:15 GMT
-
-Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: AI. Start time: 2019/11/26 09:42:15
+Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: AI. Start time: 2019/11/26 11:54:30
 GMT
 
-Reading https://ainow.ai/?s=AI
-Charset: UTF-8
-
-Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: IoT. Start time: 2019/11/26 09:42:17
+Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: IoT. Start time: 2019/11/26 11:54:50
 GMT
-
-Reading https://ainow.ai/?s=IoT
-Charset: UTF-8
 
 ************************************************************************************************************************
-*End time:                                       2019/11/26 09:42:18 GMT                                               *
+*End time:                                       2019/11/26 11:55:19 GMT                                               *
 ************************************************************************************************************************
 

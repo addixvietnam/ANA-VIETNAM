@@ -1,8 +1,9 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/26 09:36:16 GMT                                               *
+*Start time:                                     2019/11/26 11:26:50 GMT                                               *
 ************************************************************************************************************************
 
-D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+WORKING DIRECTORY:
+	D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
 
 Starting init ana Project
 
@@ -15,14 +16,37 @@ Adding data to website object (use hashmap)
 
 Adding data to element of website (use hashmap)
 
-========================================================================================================================
-Error Read Input Excel Error (D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/input/input.xlsx)
-Date: 2019/11/26 09:36:17 GMT
-   java.lang.NumberFormatException: For input string: ""
+Adding data to keyword of website (use array)
 
-========================================================================================================================
+Finished init ana Project
+
+Starting ANA-1 Project. Start time: 2019/11/26 11:26:51 GMT
+
+Reading all old data with website is ainow. Start time: 2019/11/26 11:26:51 GMT
+
+Reading old data with keyword is AI. Start time: 2019/11/26 11:26:51 GMT
+
+End reading old data with keyword is AI. End time: 2019/11/26 11:26:51 GMT
+
+Reading old data with keyword is IoT. Start time: 2019/11/26 11:26:51 GMT
+
+End reading old data with keyword is IoT. End time: 2019/11/26 11:26:51 GMT
+
+End reading all old data with website is ainow. End time: 2019/11/26 11:26:51 GMT
+
+Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: AI. Start time: 2019/11/26 11:26:51
+GMT
+
+Reading https://ainow.ai/?s=AI
+Charset: UTF-8
+
+Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: IoT. Start time: 2019/11/26 11:26:55
+GMT
+
+Reading https://ainow.ai/?s=IoT
+Charset: UTF-8
 
 ************************************************************************************************************************
-*End time:                                       2019/11/26 09:36:17 GMT                                               *
+*End time:                                       2019/11/26 11:26:57 GMT                                               *
 ************************************************************************************************************************
 

@@ -102,7 +102,10 @@ public class Ana {
                     WebsiteData_Controller myOutputData = new WebsiteData_Controller();
                     myOutputData.readDataWebsite();
                     //Write data (only 1 keyword) to excel file
-                    myOutputData.writeToExcelFile(strOutExcelFile, "Sheet1", GlobalVars.LIST_WEBSITE_DATA);
+                    myOutputData.writeToOutputExcelFile(strOutExcelFile, "Sheet1", GlobalVars.LIST_WEBSITE_DATA);
+                    //Write to end of file in data storage
+                    myOutputData.writeToEndStorageExcelFile(GlobalVars.WORK_DIRECTORY + "/output/data_storge/" + webName.toLowerCase() + ".xlsx", 
+                            GlobalVars.ARRAY_KEYWORD[i].trim().toUpperCase(), GlobalVars.LIST_WEBSITE_DATA);
                 }
             }else{//ANA 2
 //                myLog.writeLog(GlobalVars.LOG_FILE_NAME, myLog.formatStringContent("Starting ANA-2 Project. Start time: " + startProjectTime));
@@ -349,7 +352,7 @@ public class Ana {
                     } 
                     Map<String, Boolean> myOldData = GlobalVars.MAP_OLD_DATA.get(keyword);
 //                    if((!GlobalVars.arrItemUrl.contains(strUrl)) && (countItemArray < GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
-                    if((!GlobalVars.MAP_ITEM_URL.containsKey(strUrl)) && (GlobalVars.TOTAL_URL_ITEM  < GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
+                    if((!GlobalVars.MAP_ITEM_URL.containsKey(strUrl)) && (GlobalVars.TOTAL_URL_ITEM  <= GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
                         if((!myOldData.containsKey(strUrl)) && (!strUrl.contains("/tag/"))){                        
                             GlobalVars.MAP_ITEM_URL.put(strUrl, Boolean.TRUE);
                             WebsiteData myModelData = new WebsiteData(webName, 
