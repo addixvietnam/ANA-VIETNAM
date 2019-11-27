@@ -127,7 +127,11 @@ public class Ana {
         }
         System.out.println("Finished program");
     }
-    
+    /**
+     * Read excel data file with 1 keyword
+     * @param keyword
+     * @param webName 
+     */
     public void readOldData1Keyword(String keyword, String webName){        
         
         GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, GlobalVars.LOG_ADDIX.formatStringContent("Reading all old data with website is " + 
