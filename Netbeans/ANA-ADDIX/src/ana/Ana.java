@@ -70,6 +70,8 @@ public class Ana {
             String startProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
             String webName = presentWebsite.getKey().trim();
             String strOutExcelFile = "";
+            System.out.println("Processing data with website " + webName);
+
             //Copy from input excel template to output file
             try{
                 // Get date time follow format yyyyMMdd                
@@ -83,26 +85,35 @@ public class Ana {
                         GlobalVars.LOG_ADDIX.formatStringError("Copy file " + webName, ex.toString()));   
             }
             
+            System.out.println("\tCopied from " + GlobalVars.WORK_DIRECTORY + "/input/output.xlsx" + 
+                    "\n\t         to " + strOutExcelFile);
             
             if(GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getType() == 1){//ANA 1
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                         GlobalVars.LOG_ADDIX.formatStringContent("Starting ANA-1 Project. Start time: " + startProjectTime));                
                 GlobalVars.MAP_PROJECTS.getProject("ANA-1").setCreateDate(startProjectTime);
-                //Read old data from excel file in data_storage
-                readOldData(GlobalVars.LOG_ADDIX, webName);
+                //Read all old data from excel file in data_storage
+//                readOldData(GlobalVars.LOG_ADDIX, webName);
                 //Read data from website
                 String webSearch = presentWebsite.getValue().getUrl().trim();
                 
                 for(int i = 0; i < GlobalVars.ARRAY_KEYWORD.length; i++){
+                    System.out.println(i + ". Keyword " + GlobalVars.ARRAY_KEYWORD[i].trim());
+                    System.out.println("\tReading old data of keyword " + GlobalVars.ARRAY_KEYWORD[i].trim());
+                    readOldData1Keyword(GlobalVars.ARRAY_KEYWORD[i].trim(), webName);                    
                     GlobalVars.MAP_ITEM_URL = new HashMap<>();
                     GlobalVars.LIST_WEBSITE_DATA = new ArrayList<>();
-                    //read new url item from website with a keyword. Then save to arrItemUrl, arrItemTitle
+                    System.out.println("\t-Reading new url which doesn't exist in data_storage.");
+                    //read new url item from website with a keyword. Then save to arrItemUrl, arrItemTitle                    
                     readDataKeywordWebsite(presentWebsite.getKey().trim(), GlobalVars.ARRAY_KEYWORD[i].trim(), webSearch);
+                    System.out.println("\t-Reading full data of every item url");
                     //Fill data to LIST_WEBSITE_DATA
                     WebsiteData_Controller myOutputData = new WebsiteData_Controller();
                     myOutputData.readDataWebsite();
-                    //Write data (only 1 keyword) to excel file
-                    myOutputData.writeToOutputExcelFile(strOutExcelFile, "Sheet1", GlobalVars.LIST_WEBSITE_DATA);
+                    System.out.println("\t-Writing data to excel file.");
+                    //Write data (only 1 keyword) to output excel file
+                    myOutputData.writeToOutputExcelFile(strOutExcelFile, "Sheet1", GlobalVars.LIST_WEBSITE_DATA, webName, GlobalVars.ARRAY_KEYWORD[i].trim());
+                    System.out.println("\t-Writing data to end of data_storage");
                     //Write to end of file in data storage
                     myOutputData.writeToEndStorageExcelFile(GlobalVars.WORK_DIRECTORY + "/output/data_storge/" + webName.toLowerCase() + ".xlsx", 
                             GlobalVars.ARRAY_KEYWORD[i].trim().toUpperCase(), GlobalVars.LIST_WEBSITE_DATA);
@@ -114,9 +125,56 @@ public class Ana {
                 
             }            
         }
+        System.out.println("Finished program");
     }
     
-    
+    public void readOldData1Keyword(String keyword, String webName){        
+        
+        GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, GlobalVars.LOG_ADDIX.formatStringContent("Reading all old data with website is " + 
+                        webName + ". Start time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));
+        String oldFileName = GlobalVars.WORK_DIRECTORY + "\\output\\data_storge\\" + webName + ".xlsx";
+        
+        GlobalVars.MAP_OLD_DATA = new HashMap<>();
+        String[][] oldUrlItem = null;
+
+        if(GlobalVars.DEBUG == 1){
+            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, GlobalVars.LOG_ADDIX.formatStringContent("Reading old data with keyword is " + 
+                keyword.trim() + ". Start time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));
+        }
+
+        try{
+            AddixExcel libExcelFile = new AddixExcel(oldFileName) {
+                @Override
+                public boolean writeExcelFile(String string, String[][] strings) {
+                    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                }
+
+                @Override
+                public boolean writeExcelFile(String string, int i, int i1, String[][] strings) {
+                    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                }
+            };
+            oldUrlItem = libExcelFile.readExcelFile(keyword, false, new int[]{1});
+
+        }catch(Exception ex){
+            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                GlobalVars.LOG_ADDIX.formatStringError("Read Input Keyword (" + keyword.trim() + ") Excel Error (" + oldFileName + ")", ex.toString()));
+        }
+        if(GlobalVars.DEBUG == 1){
+            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, GlobalVars.LOG_ADDIX.formatStringContent("End reading old data with keyword is " + 
+                keyword.trim() + ". End time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));                    
+        }
+
+        for(int row = 0; row < oldUrlItem.length; row++){
+            Map<String, Boolean> objValue = new HashMap<>();
+            objValue.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
+            GlobalVars.MAP_OLD_DATA.put(keyword.trim(), objValue);
+        }
+        
+            
+        GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, GlobalVars.LOG_ADDIX.formatStringContent("End reading all old data with website is " + 
+                        webName + ". End time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));          
+    }
     /**
      * Read configure from Config.md file
      */
@@ -196,8 +254,10 @@ public class Ana {
             }
             String[][] keywordData = libExcelFile.readExcelFile("keyword", true, null);
             GlobalVars.ARRAY_KEYWORD = new String[keywordData.length];
+//            System.out.println("Keyword length: " + keywordData.length);
             for(int i = 0; i < keywordData.length; i++){
                 GlobalVars.ARRAY_KEYWORD[i] = keywordData[i][0];
+//                System.out.println(i + " => " + keywordData[i][0]);
             }            
             
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 

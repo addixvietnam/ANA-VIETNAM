@@ -71,7 +71,7 @@ public class WebsiteData_Controller {
      * @param sheetName
      * @param arrData 
      */
-    public void writeToOutputExcelFile(String fileName, String sheetName, ArrayList<WebsiteData> arrData){
+    public void writeToOutputExcelFile(String fileName, String sheetName, ArrayList<WebsiteData> arrData, String webName, String keyword){
         try{
             //Get day of week and format them
             SimpleDateFormat strFormatDate= new SimpleDateFormat("yyyyMMdd");
@@ -84,6 +84,9 @@ public class WebsiteData_Controller {
 
             String strDayOfWeek = myFormatDate.with(TemporalAdjusters.next(DayOfWeek.FRIDAY)).toString();
             strDayOfWeek = strDayOfWeek.replace("-", "");
+            System.out.println("\t-Writing data to file " + fileName);
+            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                    GlobalVars.LOG_ADDIX.formatStringContent("Writing data to output file " + fileName));
             
             //Open excel file
             File outputExcelFile = new File(fileName);            
@@ -97,58 +100,75 @@ public class WebsiteData_Controller {
             int lastRow = sheet.getLastRowNum();
             String linkUrl = "";     
             
-            for(int i = 0; i < arrData.size(); i++){                
-                lastRow ++;                
-                Row row = sheet.createRow(lastRow);
-                row.createCell(0).setCellValue(i + 1);
-                row.createCell(1).setCellValue(arrData.get(i).getWebName());
-                row.createCell(2).setCellValue(arrData.get(i).getUrlListTab());
-                row.createCell(3).setCellValue(arrData.get(i).getKeyword());
+            if(arrData.isEmpty()){
+                WebsiteElement elementWeb = GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName);
                 
-                String strUrlArticle = arrData.get(i).getUrlArticle();
-                row.createCell(4).setCellValue(strUrlArticle);
-                
-                row.createCell(5).setCellValue(arrData.get(i).getTitle());
-                row.createCell(6).setCellValue(arrData.get(i).getPostDate());
-                row.createCell(7).setCellValue(arrData.get(i).getSource());
-                row.createCell(8).setCellValue(arrData.get(i).getAllText());
-                
-                if(strUrlArticle.contains("https://")){
-                    strUrlArticle = strUrlArticle.replace("https://", "");
-                }else if(strUrlArticle.contains("http://")){
-                    strUrlArticle.replace("http://", "");
+                for(int i = 0; i < GlobalVars.NUMBER_LIMIT_TOP_URL; i++){
+                    lastRow ++;                
+                    Row row = sheet.createRow(lastRow);
+                    row.createCell(0).setCellValue(i + 1);
+                    row.createCell(1).setCellValue(webName);
+                    row.createCell(2).setCellValue(elementWeb.getDomain());
+                    row.createCell(3).setCellValue(keyword);
                 }
-                linkUrl = "https://s3.console.aws.amazon.com/s3/buckets/avatar-rpa-products/"+ strDayOfWeek + "HTTrack/"+strUrlArticle+"index.html";
-                row.createCell(9).setCellValue(linkUrl);
-                
-//                if(GlobalVars.DEBUG == 1){
-//                    System.out.println((i + 1) + "\n" + arrData.get(i).getWebName() 
-//                        + "\n" + arrData.get(i).getUrlListTab()
-//                        + "\n" + arrData.get(i).getKeyword()
-//                        + "\n" + arrData.get(i).getUrlArticle()
-//                        + "\n" + arrData.get(i).getTitle()
-//                        + "\n" + arrData.get(i).getPostDate()
-//                        + "\n" + arrData.get(i).getSource()
-//                        + "\n" + arrData.get(i).getAllText()
-//                        + "\n" + linkUrl
-//                    );  
-//                }
+            }else{
+                for(int i = 0; i < arrData.size(); i++){                
+                    lastRow ++;                
+                    Row row = sheet.createRow(lastRow);
+                    row.createCell(0).setCellValue(i + 1);
+                    row.createCell(1).setCellValue(arrData.get(i).getWebName());
+                    row.createCell(2).setCellValue(arrData.get(i).getUrlListTab());
+                    row.createCell(3).setCellValue(arrData.get(i).getKeyword());
 
+                    String strUrlArticle = arrData.get(i).getUrlArticle();
+                    row.createCell(4).setCellValue(strUrlArticle);
+
+                    row.createCell(5).setCellValue(arrData.get(i).getTitle());
+                    row.createCell(6).setCellValue(arrData.get(i).getPostDate());
+                    row.createCell(7).setCellValue(arrData.get(i).getSource());
+                    row.createCell(8).setCellValue(arrData.get(i).getAllText());
+
+                    if(strUrlArticle.contains("https://")){
+                        strUrlArticle = strUrlArticle.replace("https://", "");
+                    }else if(strUrlArticle.contains("http://")){
+                        strUrlArticle.replace("http://", "");
+                    }
+                    linkUrl = "https://s3.console.aws.amazon.com/s3/buckets/avatar-rpa-products/"+ strDayOfWeek + "HTTrack/"+strUrlArticle+"index.html";
+                    row.createCell(9).setCellValue(linkUrl);
+
+    //                if(GlobalVars.DEBUG == 1){
+    //                    System.out.println((i + 1) + "\n" + arrData.get(i).getWebName() 
+    //                        + "\n" + arrData.get(i).getUrlListTab()
+    //                        + "\n" + arrData.get(i).getKeyword()
+    //                        + "\n" + arrData.get(i).getUrlArticle()
+    //                        + "\n" + arrData.get(i).getTitle()
+    //                        + "\n" + arrData.get(i).getPostDate()
+    //                        + "\n" + arrData.get(i).getSource()
+    //                        + "\n" + arrData.get(i).getAllText()
+    //                        + "\n" + linkUrl
+    //                    );  
+    //                }
+                }
+                for(int i = arrData.size(); i < GlobalVars.NUMBER_LIMIT_TOP_URL; i++){
+                    lastRow ++;
+                    Row row = sheet.createRow(lastRow);
+                    row.createCell(0).setCellValue(i + 1);
+                    row.createCell(1).setCellValue(arrData.get(0).getWebName());
+                    row.createCell(2).setCellValue(arrData.get(0).getUrlListTab());
+                    row.createCell(3).setCellValue(arrData.get(0).getKeyword());
+    //                if(GlobalVars.DEBUG == 1){
+    //                    System.out.println((i + 1) + "\n" + arrData.get(i).getWebName() 
+    //                        + "\n" + arrData.get(0).getUrlListTab()
+    //                        + "\n" + arrData.get(0).getKeyword()                        
+    //                    );
+    //                }
+                }
             }
-            for(int i = arrData.size(); i < GlobalVars.NUMBER_LIMIT_TOP_URL; i++){
-                lastRow ++;
-                Row row = sheet.createRow(lastRow);
-                row.createCell(0).setCellValue(i + 1);
-                row.createCell(1).setCellValue(arrData.get(0).getWebName());
-                row.createCell(2).setCellValue(arrData.get(0).getUrlListTab());
-                row.createCell(3).setCellValue(arrData.get(0).getKeyword());
-//                if(GlobalVars.DEBUG == 1){
-//                    System.out.println((i + 1) + "\n" + arrData.get(i).getWebName() 
-//                        + "\n" + arrData.get(0).getUrlListTab()
-//                        + "\n" + arrData.get(0).getKeyword()                        
-//                    );
-//                }
+            
+            if(arrData.size() >= 1){
+                
             }
+
             myFileInputStream.close();
             FileOutputStream output_file =new FileOutputStream(new File(fileName));
             //write changes

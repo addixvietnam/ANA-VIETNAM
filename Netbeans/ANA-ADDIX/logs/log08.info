@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/26 11:36:58 GMT                                               *
+*Start time:                                     2019/11/27 01:59:23 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,46 +7,49 @@ WORKING DIRECTORY:
 
 Starting init ana Project
 
-Reading from input excel file
-
-Finished reading input excel file.
-Adding data to project (use hashmap)
-
-Adding data to website object (use hashmap)
-
-Adding data to element of website (use hashmap)
-
-Adding data to keyword of website (use array)
-
 Finished init ana Project
 
-Starting ANA-1 Project. Start time: 2019/11/26 11:36:58 GMT
+Starting ANA-1 Project. Start time: 2019/11/27 01:59:23 GMT
 
-Reading all old data with website is ainow. Start time: 2019/11/26 11:36:58 GMT
+Reading all old data with website is techable. Start time: 2019/11/27 01:59:23 GMT
 
-Reading old data with keyword is AI. Start time: 2019/11/26 11:36:58 GMT
+End reading all old data with website is techable. End time: 2019/11/27 01:59:25 GMT
 
-End reading old data with keyword is AI. End time: 2019/11/26 11:36:58 GMT
+Starting ANA-1 Project. Start time: 2019/11/27 01:59:25 GMT
 
-Reading old data with keyword is IoT. Start time: 2019/11/26 11:36:58 GMT
+Reading all old data with website is ainow. Start time: 2019/11/27 01:59:25 GMT
 
-End reading old data with keyword is IoT. End time: 2019/11/26 11:36:58 GMT
+End reading all old data with website is ainow. End time: 2019/11/27 01:59:25 GMT
 
-End reading all old data with website is ainow. End time: 2019/11/26 11:36:58 GMT
+Starting ANA-1 Project. Start time: 2019/11/27 01:59:25 GMT
 
-Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: AI. Start time: 2019/11/26 11:36:58
-GMT
+Reading all old data with website is newsmynavi. Start time: 2019/11/27 01:59:25 GMT
 
-Reading https://ainow.ai/?s=AI
-Charset: UTF-8
+End reading all old data with website is newsmynavi. End time: 2019/11/27 01:59:26 GMT
 
-Reading top n keyword & checking exist item on old data. Website: ainow .Keyword: IoT. Start time: 2019/11/26 11:37:02
-GMT
+Starting ANA-1 Project. Start time: 2019/11/27 01:59:26 GMT
 
-Reading https://ainow.ai/?s=IoT
-Charset: UTF-8
+Reading all old data with website is moguravr. Start time: 2019/11/27 01:59:26 GMT
 
-************************************************************************************************************************
-*End time:                                       2019/11/26 11:37:05 GMT                                               *
-************************************************************************************************************************
+End reading all old data with website is moguravr. End time: 2019/11/27 01:59:27 GMT
+
+========================================================================================================================
+Error Copy file kyodonews
+Date: 2019/11/27 01:59:27 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_page_source\HTML\kyodonews\20191127_kyodonews.xlsx (The
+   system cannot find the path specified)
+========================================================================================================================
+
+Starting ANA-1 Project. Start time: 2019/11/27 01:59:27 GMT
+
+Reading all old data with website is kyodonews. Start time: 2019/11/27 01:59:27 GMT
+
+========================================================================================================================
+Error Read Input Keyword (AI) Excel Error (D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX\output\data_storge\kyodonews.xlsx)
+Date: 2019/11/27 01:59:27 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\kyodonews.xlsx (The system cannot find the file
+   specified)
+========================================================================================================================
 
