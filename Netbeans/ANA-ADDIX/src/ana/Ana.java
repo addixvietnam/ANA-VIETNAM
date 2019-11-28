@@ -70,9 +70,9 @@ public class Ana {
         for (Map.Entry<String, Website> presentWebsite : GlobalVars.MAP_WEBSITE.getWebsites().entrySet()) {
             //Read all old url item of 1 website from data_storage
             GlobalVars.MAP_OLD_DATA = new HashMap<>();//free & reallocate memory for old data          
-//            String startProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
+            String beginWebsiteTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
             String webName = presentWebsite.getKey().trim();
-            String strOutExcelFile = "";
+            String strOutExcelFile = "";            
             System.out.println("Processing data with website " + webName);
 
             //Copy from input excel template to output file
@@ -87,13 +87,12 @@ public class Ana {
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                         GlobalVars.LOG_ADDIX.formatStringError("Copy file " + webName, ex.toString()));   
             }
-            
-            System.out.println("\tCopied from " + GlobalVars.WORK_DIRECTORY + "/input/output.xlsx" + 
+            if(GlobalVars.DEBUG == 1){
+                System.out.println("\tCopied from " + GlobalVars.WORK_DIRECTORY + "/input/output.xlsx" + 
                     "\n\t         to " + strOutExcelFile);
+            }            
             
-            if(GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getType() == 1){//ANA 1
-                GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                        GlobalVars.LOG_ADDIX.formatStringContent("Starting ANA-1 Project. Start time: " + startProjectTime));                
+            if(GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getType() == 1){//ANA 1              
                 GlobalVars.MAP_PROJECTS.getProject("ANA-1").setCreateDate(startProjectTime);
                 //Read all old data from excel file in data_storage
 //                readOldData(GlobalVars.LOG_ADDIX, webName);
@@ -101,36 +100,83 @@ public class Ana {
                 String webSearch = presentWebsite.getValue().getUrl().trim();
                 
                 for(int i = 0; i < GlobalVars.ARRAY_KEYWORD.length; i++){
-                    System.out.println(i + ". Keyword " + GlobalVars.ARRAY_KEYWORD[i].trim());
+                    String strOutLog = "";
+                    String beginKeywordTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
+                    strOutLog = (i+1) + ". Keyword " + GlobalVars.ARRAY_KEYWORD[i].trim();     
+                    
+                    System.out.println(strOutLog);
                     System.out.println("\tReading old data of keyword " + GlobalVars.ARRAY_KEYWORD[i].trim());
-                    readOldData1Keyword(GlobalVars.ARRAY_KEYWORD[i].trim(), webName);                    
+                    GlobalVars.ERRORS = 0;
+                    readOldData1Keyword(GlobalVars.ARRAY_KEYWORD[i].trim(), webName);  
+                    
                     GlobalVars.MAP_ITEM_URL = new HashMap<>();
                     GlobalVars.LIST_WEBSITE_DATA = new ArrayList<>();
-                    System.out.println("\t-Reading new url which doesn't exist in data_storage.");
-                    //read new url item from website with a keyword. Then save to arrItemUrl, arrItemTitle                    
-                    readDataKeywordWebsite(presentWebsite.getKey().trim(), GlobalVars.ARRAY_KEYWORD[i].trim(), webSearch);
-                    System.out.println("\t-Reading full data of every item url");
-                    //Fill data to LIST_WEBSITE_DATA
+                    if(GlobalVars.ERRORS == 0){
+                        if(GlobalVars.DEBUG == 1){
+                            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                                    GlobalVars.LOG_ADDIX.formatStringContent("\t-Reading new url which doesn't exist in data_storage."));  
+                        }
+                         System.out.println("\t-Reading new url which doesn't exist in data_storage.");
+                        //read new url item from website with a keyword. Then save to arrItemUrl, arrItemTitle                    
+                        readDataKeywordWebsite(presentWebsite.getKey().trim(), GlobalVars.ARRAY_KEYWORD[i].trim(), webSearch);
+                    }
                     WebsiteData_Controller myOutputData = new WebsiteData_Controller();
-                    myOutputData.readDataWebsite();
-                    System.out.println("\t-Writing data to excel file.");
-                    //Write data (only 1 keyword) to output excel file
-                    myOutputData.writeToOutputExcelFile(strOutExcelFile, "Sheet1", GlobalVars.LIST_WEBSITE_DATA, webName, GlobalVars.ARRAY_KEYWORD[i].trim());
-                    System.out.println("\t-Writing data to end of data_storage");
+                    if(GlobalVars.ERRORS == 0){
+                        if(GlobalVars.DEBUG == 1){
+                            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                                    GlobalVars.LOG_ADDIX.formatStringContent("\t-Reading and fill data of every item url"));  
+                        }
+                        System.out.println("\t-Reading and fill data of every item url");
+                        //Fill data to LIST_WEBSITE_DATA                        
+                        myOutputData.readDataWebsite();
+                    }
+                    if(GlobalVars.ERRORS == 0){
+                        if(GlobalVars.DEBUG == 1){
+                            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                                    GlobalVars.LOG_ADDIX.formatStringContent("\t-Writing data to output excel file."));  
+                        }
+                        System.out.println("\t-Writing data to output excel file.");
+                        //Write data (only 1 keyword) to output excel file
+                        myOutputData.writeToOutputExcelFile(strOutExcelFile, "Sheet1", GlobalVars.LIST_WEBSITE_DATA, webName, GlobalVars.ARRAY_KEYWORD[i].trim());
+                        
+                    }
+                    if(GlobalVars.ERRORS == 0){
+                        if(GlobalVars.DEBUG == 1){
+                            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                                    GlobalVars.LOG_ADDIX.formatStringContent("\t-Writing data to end of data_storage."));  
+                        }
+                        System.out.println("\t-Writing data to end of data_storage");
+                        myOutputData.writeToEndStorageExcelFile(GlobalVars.WORK_DIRECTORY + "/output/data_storge/" + webName.toLowerCase().trim() + ".xlsx", 
+                                GlobalVars.ARRAY_KEYWORD[i].trim(), GlobalVars.LIST_WEBSITE_DATA);
+                    }
+                                        
                     //Write to end of file in data storage
                     myOutputData.writeToEndStorageExcelFile(GlobalVars.WORK_DIRECTORY + "/output/data_storge/" + webName.toLowerCase() + ".xlsx", 
                             GlobalVars.ARRAY_KEYWORD[i].trim().toUpperCase(), GlobalVars.LIST_WEBSITE_DATA);
+                    
+                    String endKeywordTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
+                    GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                        GlobalVars.LOG_ADDIX.formatStringContent((i+1) + ". Keyword " + GlobalVars.ARRAY_KEYWORD[i].trim() + ".\nTotal time " + 
+                                Utilities.getTotalWaitTime(beginKeywordTime, endKeywordTime, "yyyy/MM/dd HH:mm:ss z")));
+//                                "\tBegin time: " + beginKeywordTime + "\tEnd time: " + endKeywordTime));  
                 }
             }else{//ANA 2
 //                myLog.writeLog(GlobalVars.LOG_FILE_NAME, myLog.formatStringContent("Starting ANA-2 Project. Start time: " + startProjectTime));
 //                GlobalVars.projectMap.get("ANA-2").setCreateDate(startProjectTime);
 //                readOldData(myLog, webName);
                 
-            }            
+            }         
+            String endWebsiteTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
+            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                        GlobalVars.LOG_ADDIX.formatStringContent("Finished getting data from " + webName + ". \nTotal time " + 
+                                Utilities.getTotalWaitTime(beginWebsiteTime, endWebsiteTime, "yyyy/MM/dd HH:mm:ss z")));
+//                                "\tBegin time: " + beginWebsiteTime + "\tEnd time: " + endWebsiteTime));              
         }
         String endProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
         GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                        GlobalVars.LOG_ADDIX.formatStringContent("Finished ANA-1 Project. Total time: " + startProjectTime));  
+                        GlobalVars.LOG_ADDIX.formatStringContent("Finished ANA-1 Project. \nTotal time " + 
+                                Utilities.getTotalWaitTime(startProjectTime, endProjectTime, "yyyy/MM/dd HH:mm:ss z")));  
+//                                "\tBegin time: " + startProjectTime + "\tEnd time: " + endProjectTime));  
         System.out.println("Finished program");
     }
     /**
@@ -139,9 +185,7 @@ public class Ana {
      * @param webName 
      */
     public void readOldData1Keyword(String keyword, String webName){        
-        
-        GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, GlobalVars.LOG_ADDIX.formatStringContent("Reading all old data with website is " + 
-                        webName + ". Start time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));
+
         String oldFileName = GlobalVars.WORK_DIRECTORY + "\\output\\data_storge\\" + webName + ".xlsx";
         
         GlobalVars.MAP_OLD_DATA = new HashMap<>();
@@ -179,11 +223,7 @@ public class Ana {
             Map<String, Boolean> objValue = new HashMap<>();
             objValue.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
             GlobalVars.MAP_OLD_DATA.put(keyword.trim(), objValue);
-        }
-        
-            
-        GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, GlobalVars.LOG_ADDIX.formatStringContent("End reading all old data with website is " + 
-                        webName + ". End time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));          
+        }          
     }
     /**
      * Read configure from Config.md file
@@ -263,14 +303,14 @@ public class Ana {
             }
             String[][] keywordData = libExcelFile.readExcelFile("keyword", true, null);
             GlobalVars.ARRAY_KEYWORD = new String[keywordData.length];
-//            System.out.println("Keyword length: " + keywordData.length);
             for(int i = 0; i < keywordData.length; i++){
                 GlobalVars.ARRAY_KEYWORD[i] = keywordData[i][0];
-//                System.out.println(i + " => " + keywordData[i][0]);
             }            
             String endInitAnaTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                        GlobalVars.LOG_ADDIX.formatStringContent("Finished init ana Project (read input.xlsx). Total time " + CommonFunctions.getTotalWaitTime(startInitAnaTime, endInitAnaTime)));
+                        GlobalVars.LOG_ADDIX.formatStringContent("Finished init ana Project (read input.xlsx). \nTotal time " + 
+                                Utilities.getTotalWaitTime(startInitAnaTime, endInitAnaTime, "yyyy/MM/dd HH:mm:ss z"))); 
+//                                "\tBegin time: " + startInitAnaTime + "\tEnd time: " + endInitAnaTime));
             
         } catch (Exception ex) {
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
@@ -285,9 +325,11 @@ public class Ana {
      */
     public void readDataKeywordWebsite(String webName, String keyword, String urlSearch){
         GlobalVars.TOTAL_URL_ITEM = 1;
-        GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+        if(GlobalVars.DEBUG == 1){
+            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                 GlobalVars.LOG_ADDIX.formatStringContent("Reading top n keyword & checking exist item on old data. Website: " + 
                     webName + " .Keyword: " + keyword + ". Start time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));
+        }        
         urlSearch = urlSearch.replace("(keyword)", keyword);                
         int pageNum = 1;
 
@@ -319,8 +361,11 @@ public class Ana {
      * @param webName is name of excel file which storage old data
      */
     public void readOldData(Log myLog, String webName){
-        myLog.writeLog(GlobalVars.LOG_FILE_NAME, myLog.formatStringContent("Reading all old data with website is " + 
-                        webName + ". Start time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));
+        if(GlobalVars.DEBUG == 1){
+            myLog.writeLog(GlobalVars.LOG_FILE_NAME, myLog.formatStringContent("Reading all old data with website is " + 
+                    webName + ". Start time: " + Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE)));            
+        }
+
             for(int i = 0; i < GlobalVars.ARRAY_KEYWORD.length; i++){                
                 String oldFileName = GlobalVars.WORK_DIRECTORY + "\\output\\data_storge\\" + webName + ".xlsx";
                 String[][] oldUrlItem = null;
@@ -435,6 +480,7 @@ public class Ana {
                 }
             }            
         }catch(Exception ex){
+            GlobalVars.ERRORS = 1;
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                 GlobalVars.LOG_ADDIX.formatStringError("Error JSoup read page " + childUrl, ex.toString()));            
         }        

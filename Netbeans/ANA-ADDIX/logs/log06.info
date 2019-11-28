@@ -1,83 +1,68 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/27 02:04:46 GMT                                               *
+*Start time:                                     2019/11/28 04:17:21 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
-	D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Starting init ana Project
+Finished init ana Project (read input.xlsx). 
+Total time 0 hours 0 minutes 0 seconds 	Begin time: 2019/11/28 04:17:21
+GMT	End time: 2019/11/28 04:17:21 GMT
 
-Finished init ana Project
+Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/28 04:17:22
+GMT
 
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:47 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:04:47 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:04:48 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:48 GMT
-
-Reading all old data with website is ainow. Start time: 2019/11/27 02:04:48 GMT
-
-End reading all old data with website is ainow. End time: 2019/11/27 02:04:48 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:48 GMT
-
-Reading all old data with website is newsmynavi. Start time: 2019/11/27 02:04:48 GMT
-
-End reading all old data with website is newsmynavi. End time: 2019/11/27 02:04:49 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:49 GMT
-
-Reading all old data with website is moguravr. Start time: 2019/11/27 02:04:49 GMT
-
-End reading all old data with website is moguravr. End time: 2019/11/27 02:04:50 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:50 GMT
-
-Reading all old data with website is kyodonews. Start time: 2019/11/27 02:04:50 GMT
-
-End reading all old data with website is kyodonews. End time: 2019/11/27 02:04:51 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:51 GMT
-
-Reading all old data with website is roboteer. Start time: 2019/11/27 02:04:51 GMT
-
-End reading all old data with website is roboteer. End time: 2019/11/27 02:04:51 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:51 GMT
-
-Reading all old data with website is wirelesswire. Start time: 2019/11/27 02:04:51 GMT
-
-End reading all old data with website is wirelesswire. End time: 2019/11/27 02:04:51 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:51 GMT
-
-Reading all old data with website is prtimes. Start time: 2019/11/27 02:04:51 GMT
-
-End reading all old data with website is prtimes. End time: 2019/11/27 02:04:52 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:52 GMT
-
-Reading all old data with website is sorae. Start time: 2019/11/27 02:04:52 GMT
-
-End reading all old data with website is sorae. End time: 2019/11/27 02:04:53 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
 
 ========================================================================================================================
-Error Copy file monoist
-Date: 2019/11/27 02:04:53 GMT
+Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techablexlsx
+Date: 2019/11/28 04:17:47 GMT
    java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_page_source\HTML\monoist\20191127_monoist.xlsx (The system
-   cannot find the path specified)
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techablexlsx (The system cannot find the file
+   specified)
 ========================================================================================================================
 
-Starting ANA-1 Project. Start time: 2019/11/27 02:04:53 GMT
+1. Keyword AI.
+Total time 0 hours 0 minutes 27 seconds 	Begin time: 2019/11/28 04:17:21 GMT	End time: 2019/11/28
+04:17:48 GMT
 
-Reading all old data with website is robotstart. Start time: 2019/11/27 02:04:53 GMT
+Reading top n keyword & checking exist item on old data. Website: techable .Keyword: IoT. Start time: 2019/11/28
+04:17:48 GMT
 
-End reading all old data with website is robotstart. End time: 2019/11/27 02:04:53 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
 
-************************************************************************************************************************
-*End time:                                       2019/11/27 02:04:53 GMT                                               *
-************************************************************************************************************************
+========================================================================================================================
+Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techablexlsx
+Date: 2019/11/28 04:18:12 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techablexlsx (The system cannot find the file
+   specified)
+========================================================================================================================
+
+2. Keyword IoT.
+Total time 0 hours 0 minutes 24 seconds 	Begin time: 2019/11/28 04:17:48 GMT	End time: 2019/11/28
+04:18:12 GMT
+
+Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ハプティクス. Start time: 2019/11/28
+04:18:12 GMT
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+========================================================================================================================
+Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techablexlsx
+Date: 2019/11/28 04:18:14 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techablexlsx (The system cannot find the file
+   specified)
+========================================================================================================================
+
+3. Keyword ハプティクス.
+Total time 0 hours 0 minutes 2 seconds 	Begin time: 2019/11/28 04:18:12 GMT	End time: 2019/11/28
+04:18:14 GMT
+
+Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボティクス. Start time: 2019/11/28
+04:18:14 GMT
 

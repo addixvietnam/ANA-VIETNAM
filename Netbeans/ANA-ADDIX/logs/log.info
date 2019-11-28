@@ -1,197 +1,128 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/27 03:17:32 GMT                                               *
+*Start time:                                     2019/11/28 04:36:10 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
-	D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Starting init ana Project
+Finished init ana Project (read input.xlsx). 
+Total time 0 hours 0 minutes 1 seconds 
 
-Finished init ana Project
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Starting ANA-1 Project. Start time: 2019/11/27 03:17:32 GMT
+1. Keyword AI.
+Total time 0 hours 0 minutes 5 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:17:32 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:17:32 GMT
+2. Keyword IoT.
+Total time 0 hours 0 minutes 4 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/27 03:17:32
-GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+3. Keyword ハプティクス.
+Total time 0 hours 0 minutes 1 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:17:57 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:17:58 GMT
+4. Keyword ロボティクス.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: IoT. Start time: 2019/11/27
-03:17:58 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+5. Keyword ロボット.
+Total time 0 hours 0 minutes 4 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:18:21 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:18:21 GMT
+6. Keyword 触覚.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ハプティクス. Start time: 2019/11/27
-03:18:21 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+7. Keyword 遠隔操作.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:18:23 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:18:23 GMT
+8. Keyword 遠隔会議.
+Total time 0 hours 0 minutes 1 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボティクス. Start time: 2019/11/27
-03:18:23 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+9. Keyword 遠隔医療.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:18:46 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:18:46 GMT
+10. Keyword 宇宙.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボット. Start time: 2019/11/27
-03:18:46 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+11. Keyword 医療.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:19:09 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:19:09 GMT
+12. Keyword MR.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 触覚. Start time: 2019/11/27 03:19:09
-GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+13. Keyword VR.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:19:31 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:19:31 GMT
+14. Keyword デジタルサイネージ.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔操作. Start time: 2019/11/27
-03:19:31 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+15. Keyword 建設.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:20:00 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:20:00 GMT
+16. Keyword ANA AVATAR.
+Total time 0 hours 0 minutes 1 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔会議. Start time: 2019/11/27
-03:20:00 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+17. Keyword シェアリングエコノミー.
+Total time 0 hours 0 minutes 3 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 03:20:02 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ainow/20191128_ainow.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 03:20:02 GMT
+18. Keyword VR広告.
+Total time 0 hours 0 minutes 0 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔医療. Start time: 2019/11/27
-03:20:02 GMT
+Finished getting data from ainow. 
+Total time 0 hours 0 minutes 49 seconds 
 
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:20:08 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:20:08 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 宇宙. Start time: 2019/11/27 03:20:08
-GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:20:31 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:20:31 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 医療. Start time: 2019/11/27 03:20:31
-GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:20:55 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:20:55 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: MR. Start time: 2019/11/27 03:20:55
-GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:21:19 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:21:19 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: VR. Start time: 2019/11/27 03:21:19
-GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:21:42 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:21:43 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: デジタルサイネージ. Start time: 2019/11/27
-03:21:43 GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:21:57 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:21:57 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 建設. Start time: 2019/11/27 03:21:57
-GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:22:20 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:22:20 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ANA AVATAR. Start time: 2019/11/27
-03:22:20 GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:22:22 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:22:22 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: シェアリングエコノミー. Start time: 2019/11/27
-03:22:22 GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-
-Reading all old data with website is techable. Start time: 2019/11/27 03:22:47 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 03:22:47 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: VR広告. Start time: 2019/11/27
-03:22:47 GMT
-
-Writing data to output file D:/MyProjects/Sources/11.
-ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
+Finished ANA-1 Project. 
+Total time 0 hours 0 minutes 49 seconds 
 
 ************************************************************************************************************************
-*End time:                                       2019/11/27 03:22:49 GMT                                               *
+*End time:                                       2019/11/28 04:37:00 GMT                                               *
 ************************************************************************************************************************
 

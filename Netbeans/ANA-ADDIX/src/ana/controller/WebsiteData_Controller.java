@@ -58,6 +58,7 @@ public class WebsiteData_Controller {
                 GlobalVars.LIST_WEBSITE_DATA.get(i).setSource(source);
                 GlobalVars.LIST_WEBSITE_DATA.get(i).setPostDate(post_date);
             }catch(Exception ex){
+                GlobalVars.ERRORS = 1;
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                     GlobalVars.LOG_ADDIX.formatStringError("Error JSoup read page " + urlItem, ex.toString()));     
             }
@@ -164,10 +165,6 @@ public class WebsiteData_Controller {
     //                }
                 }
             }
-            
-            if(arrData.size() >= 1){
-                
-            }
 
             myFileInputStream.close();
             FileOutputStream output_file =new FileOutputStream(new File(fileName));
@@ -176,6 +173,7 @@ public class WebsiteData_Controller {
             output_file.close();
             
         }catch(Exception ex){
+            GlobalVars.ERRORS = 1;
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                     GlobalVars.LOG_ADDIX.formatStringError("Error Write Output To Excel File " + fileName, ex.toString()));   
         }
@@ -202,10 +200,10 @@ public class WebsiteData_Controller {
             myFileInputStream.close();
             FileOutputStream output_file =new FileOutputStream(new File(fileName));
             //write changes
-            workbook.write(output_file);
-            workbook.close();
-            output_file.close();
+            workbook.write(output_file);            
+            output_file.close();            
         }catch(Exception ex){
+            GlobalVars.ERRORS = 1;
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                     GlobalVars.LOG_ADDIX.formatStringError("Error Write Output To Excel File " + fileName, ex.toString()));   
         }

@@ -1,55 +1,12 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/27 01:58:30 GMT                                               *
+*Start time:                                     2019/11/28 04:04:58 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
-	D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Starting init ana Project
+Finished init ana Project (read input.xlsx). Total time 
 
-Finished init ana Project
-
-Starting ANA-1 Project. Start time: 2019/11/27 01:58:30 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 01:58:30 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 01:58:31 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 01:58:31 GMT
-
-Reading all old data with website is ainow. Start time: 2019/11/27 01:58:31 GMT
-
-End reading all old data with website is ainow. End time: 2019/11/27 01:58:32 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 01:58:32 GMT
-
-Reading all old data with website is newsmynavi. Start time: 2019/11/27 01:58:32 GMT
-
-End reading all old data with website is newsmynavi. End time: 2019/11/27 01:58:33 GMT
-
-Starting ANA-1 Project. Start time: 2019/11/27 01:58:33 GMT
-
-Reading all old data with website is moguravr. Start time: 2019/11/27 01:58:33 GMT
-
-End reading all old data with website is moguravr. End time: 2019/11/27 01:58:34 GMT
-
-========================================================================================================================
-Error Copy file kyodonews
-Date: 2019/11/27 01:58:34 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_page_source\HTML\kyodonews\20191127_kyodonews.xlsx (The
-   system cannot find the path specified)
-========================================================================================================================
-
-Starting ANA-1 Project. Start time: 2019/11/27 01:58:34 GMT
-
-Reading all old data with website is kyodonews. Start time: 2019/11/27 01:58:34 GMT
-
-========================================================================================================================
-Error Read Input Keyword (AI) Excel Error (D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX\output\data_storge\kyodonews.xlsx)
-Date: 2019/11/27 01:58:34 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\kyodonews.xlsx (The system cannot find the file
-   specified)
-========================================================================================================================
+Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/28 04:04:59
+GMT
 

@@ -1,143 +1,60 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/27 02:43:16 GMT                                               *
+*Start time:                                     2019/11/28 04:27:57 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
-	D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Starting init ana Project
+Finished init ana Project (read input.xlsx). 
+Total time 0 hours 0 minutes 0 seconds 
 
-Finished init ana Project
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
 
-Starting ANA-1 Project. Start time: 2019/11/27 02:43:16 GMT
+========================================================================================================================
+Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
+Date: 2019/11/28 04:28:21 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
+   because it is being used by another process)
+========================================================================================================================
 
-Reading all old data with website is techable. Start time: 2019/11/27 02:43:16 GMT
+========================================================================================================================
+Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
+Date: 2019/11/28 04:28:21 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
+   because it is being used by another process)
+========================================================================================================================
 
-End reading all old data with website is techable. End time: 2019/11/27 02:43:17 GMT
+1. Keyword AI.
+Total time 0 hours 0 minutes 24 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/27 02:43:17
-GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
 
-Reading all old data with website is techable. Start time: 2019/11/27 02:43:41 GMT
+========================================================================================================================
+Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
+Date: 2019/11/28 04:28:46 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
+   because it is being used by another process)
+========================================================================================================================
 
-End reading all old data with website is techable. End time: 2019/11/27 02:43:41 GMT
+========================================================================================================================
+Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
+Date: 2019/11/28 04:28:46 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
+   because it is being used by another process)
+========================================================================================================================
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: IoT. Start time: 2019/11/27
-02:43:41 GMT
+2. Keyword IoT.
+Total time 0 hours 0 minutes 24 seconds 
 
-Reading all old data with website is techable. Start time: 2019/11/27 02:44:10 GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
 
-End reading all old data with website is techable. End time: 2019/11/27 02:44:10 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ハプティクス. Start time: 2019/11/27
-02:44:10 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:44:11 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:44:11 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボティクス. Start time: 2019/11/27
-02:44:11 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:44:35 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:44:35 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボット. Start time: 2019/11/27
-02:44:35 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:44:58 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:44:58 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 触覚. Start time: 2019/11/27 02:44:58
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:45:20 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:45:20 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔操作. Start time: 2019/11/27
-02:45:20 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:45:44 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:45:44 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔会議. Start time: 2019/11/27
-02:45:44 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:45:46 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:45:46 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔医療. Start time: 2019/11/27
-02:45:46 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:45:51 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:45:51 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 宇宙. Start time: 2019/11/27 02:45:51
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:46:16 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:46:16 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 医療. Start time: 2019/11/27 02:46:16
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:46:39 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:46:39 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: MR. Start time: 2019/11/27 02:46:39
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:47:03 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:47:03 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: VR. Start time: 2019/11/27 02:47:03
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:47:26 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:47:26 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: デジタルサイネージ. Start time: 2019/11/27
-02:47:26 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:47:39 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:47:39 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 建設. Start time: 2019/11/27 02:47:39
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:48:02 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:48:03 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ANA AVATAR. Start time: 2019/11/27
-02:48:03 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:48:04 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:48:04 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: シェアリングエコノミー. Start time: 2019/11/27
-02:48:04 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:48:28 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:48:28 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: VR広告. Start time: 2019/11/27
-02:48:28 GMT
-
-************************************************************************************************************************
-*End time:                                       2019/11/27 02:48:29 GMT                                               *
-************************************************************************************************************************
+3. Keyword ハプティクス.
+Total time 0 hours 0 minutes 2 seconds 
 

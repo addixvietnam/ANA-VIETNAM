@@ -1,153 +1,16 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/27 02:20:09 GMT                                               *
+*Start time:                                     2019/11/28 04:24:21 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
-	D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
+	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Starting init ana Project
+Finished init ana Project (read input.xlsx). 
+Total time 0 hours 0 minutes 0 seconds 
 
-Finished init ana Project
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
 
-Starting ANA-1 Project. Start time: 2019/11/27 02:20:09 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:20:09 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:20:09 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/27 02:20:09
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:20:34 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:20:34 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: IoT. Start time: 2019/11/27
-02:20:34 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:20:58 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:20:58 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ハプティクス. Start time: 2019/11/27
-02:20:58 GMT
-
-========================================================================================================================
-Error Error Write Output To Excel File D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-Date: 2019/11/27 02:20:59 GMT
-   java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-
-========================================================================================================================
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:21:00 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:21:00 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボティクス. Start time: 2019/11/27
-02:21:00 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:21:22 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:21:22 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボット. Start time: 2019/11/27
-02:21:22 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:21:46 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:21:46 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 触覚. Start time: 2019/11/27 02:21:46
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:22:09 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:22:09 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔操作. Start time: 2019/11/27
-02:22:09 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:22:32 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:22:32 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔会議. Start time: 2019/11/27
-02:22:32 GMT
-
-========================================================================================================================
-Error Error Write Output To Excel File D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-Date: 2019/11/27 02:22:34 GMT
-   java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-
-========================================================================================================================
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:22:34 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:22:34 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 遠隔医療. Start time: 2019/11/27
-02:22:34 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:22:40 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:22:40 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 宇宙. Start time: 2019/11/27 02:22:40
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:23:03 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:23:03 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 医療. Start time: 2019/11/27 02:23:03
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:23:26 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:23:26 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: MR. Start time: 2019/11/27 02:23:26
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:23:49 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:23:49 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: VR. Start time: 2019/11/27 02:23:49
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:24:14 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:24:14 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: デジタルサイネージ. Start time: 2019/11/27
-02:24:14 GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:24:26 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:24:26 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: 建設. Start time: 2019/11/27 02:24:26
-GMT
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:24:49 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:24:49 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ANA AVATAR. Start time: 2019/11/27
-02:24:49 GMT
-
-========================================================================================================================
-Error Error Write Output To Excel File D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX/output/data_page_source/HTML/techable/20191127_techable.xlsx
-Date: 2019/11/27 02:24:51 GMT
-   java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-
-========================================================================================================================
-
-Reading all old data with website is techable. Start time: 2019/11/27 02:24:51 GMT
-
-End reading all old data with website is techable. End time: 2019/11/27 02:24:51 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: シェアリングエコノミー. Start time: 2019/11/27
-02:24:51 GMT
+1. Keyword AI.
+Total time 0 hours 0 minutes 26 seconds 
 

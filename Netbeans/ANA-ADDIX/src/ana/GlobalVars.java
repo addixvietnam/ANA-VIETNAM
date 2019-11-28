@@ -52,6 +52,7 @@ public class GlobalVars {
     public static String PATH_INPUT_FILE = "";
     public static int TOTAL_PAGE = 1;
     public static int TOTAL_URL_ITEM = 0;
+    public static int ERRORS = 0;
 
     public static void setGlobalVariables(String[] array){
 //        WORK_DIRECTORY = array[0];
