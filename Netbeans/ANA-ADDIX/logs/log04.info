@@ -1,16 +1,199 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 04:24:21 GMT                                               *
+*Start time:                                     2019/11/28 06:30:29 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 0 seconds 
+Total time 0 hours 0 minutes 1 seconds 
 
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911253904
+Date: 2019/11/28 06:30:36 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911274072
+Date: 2019/11/28 06:30:45 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
 
 1. Keyword AI.
+Total time 0 hours 0 minutes 20 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911193688
+Date: 2019/11/28 06:31:05 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+2. Keyword IoT.
+Total time 0 hours 0 minutes 15 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201705262156
+Date: 2019/11/28 06:31:07 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+3. Keyword ハプティクス.
+Total time 0 hours 0 minutes 3 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+4. Keyword ロボティクス.
+Total time 0 hours 0 minutes 14 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+5. Keyword ロボット.
+Total time 0 hours 0 minutes 17 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+6. Keyword 触覚.
+Total time 0 hours 0 minutes 11 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+7. Keyword 遠隔操作.
+Total time 0 hours 0 minutes 11 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201903224570
+Date: 2019/11/28 06:32:02 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+8. Keyword 遠隔会議.
+Total time 0 hours 0 minutes 5 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+9. Keyword 遠隔医療.
+Total time 0 hours 0 minutes 14 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+10. Keyword 宇宙.
+Total time 0 hours 0 minutes 11 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911253908
+Date: 2019/11/28 06:32:39 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+11. Keyword 医療.
+Total time 0 hours 0 minutes 12 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911274072
+Date: 2019/11/28 06:32:54 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911203747
+Date: 2019/11/28 06:33:02 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911203728
+Date: 2019/11/28 06:33:03 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+12. Keyword MR.
+Total time 0 hours 0 minutes 20 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911153526
+Date: 2019/11/28 06:33:23 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+13. Keyword VR.
 Total time 0 hours 0 minutes 26 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201910232464
+Date: 2019/11/28 06:33:34 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201904255826
+Date: 2019/11/28 06:33:43 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+14. Keyword デジタルサイネージ.
+Total time 0 hours 0 minutes 14 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911263986
+Date: 2019/11/28 06:33:48 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911223863
+Date: 2019/11/28 06:33:53 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+15. Keyword 建設.
+Total time 0 hours 0 minutes 17 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+16. Keyword ANA AVATAR.
+Total time 0 hours 0 minutes 15 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+17. Keyword シェアリングエコノミー.
+Total time 0 hours 0 minutes 19 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+18. Keyword VR広告.
+Total time 0 hours 0 minutes 6 seconds 
+
+Finished getting data from kyodonews. 
+Total time 0 hours 4 minutes 10 seconds 
+
+Finished ANA-1 Project. 
+Total time 0 hours 4 minutes 10 seconds 
+
+************************************************************************************************************************
+*End time:                                       2019/11/28 06:34:40 GMT                                               *
+************************************************************************************************************************
 

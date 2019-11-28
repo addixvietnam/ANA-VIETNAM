@@ -1,68 +1,17 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 04:17:21 GMT                                               *
+*Start time:                                     2019/11/28 06:10:02 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 0 seconds 	Begin time: 2019/11/28 04:17:21
-GMT	End time: 2019/11/28 04:17:21 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/28 04:17:22
-GMT
-
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+========================================================================================================================
+Error Read Input Excel Error (D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/input/input.xlsx)
+Date: 2019/11/28 06:10:02 GMT
+   java.lang.NumberFormatException: null
 
 ========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techablexlsx
-Date: 2019/11/28 04:17:47 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techablexlsx (The system cannot find the file
-   specified)
-========================================================================================================================
 
-1. Keyword AI.
-Total time 0 hours 0 minutes 27 seconds 	Begin time: 2019/11/28 04:17:21 GMT	End time: 2019/11/28
-04:17:48 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: IoT. Start time: 2019/11/28
-04:17:48 GMT
-
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techablexlsx
-Date: 2019/11/28 04:18:12 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techablexlsx (The system cannot find the file
-   specified)
-========================================================================================================================
-
-2. Keyword IoT.
-Total time 0 hours 0 minutes 24 seconds 	Begin time: 2019/11/28 04:17:48 GMT	End time: 2019/11/28
-04:18:12 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ハプティクス. Start time: 2019/11/28
-04:18:12 GMT
-
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techablexlsx
-Date: 2019/11/28 04:18:14 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techablexlsx (The system cannot find the file
-   specified)
-========================================================================================================================
-
-3. Keyword ハプティクス.
-Total time 0 hours 0 minutes 2 seconds 	Begin time: 2019/11/28 04:18:12 GMT	End time: 2019/11/28
-04:18:14 GMT
-
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: ロボティクス. Start time: 2019/11/28
-04:18:14 GMT
+Finished getting data from wired. 
+Total time 0 hours 0 minutes 0 seconds 
 

@@ -1,60 +1,482 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 04:27:57 GMT                                               *
+*Start time:                                     2019/11/28 07:13:33 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
+Starting init ana Project. 
+Reading from input excel file
+
+Finished reading input excel file.
+Adding data to project (use hashmap)
+
+Adding data to website object (use hashmap)
+
+Adding data to element of website (use hashmap)
+
+Adding data to keyword of website (use array)
+
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 0 seconds 
+Total time 0 hours 0 minutes 1 seconds 
+
+Reading old data with keyword is AI. Start time: 2019/11/28 07:13:34 GMT
+
+End reading old data with keyword is AI. End time: 2019/11/28 07:13:34 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: AI. Start time: 2019/11/28
+07:13:34 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=AI
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
 
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:28:21 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
-========================================================================================================================
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:28:21 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
-========================================================================================================================
+	-Writing data to end of data_storage.
 
 1. Keyword AI.
-Total time 0 hours 0 minutes 24 seconds 
+Total time 0 hours 0 minutes 23 seconds 
 
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+Reading old data with keyword is IoT. Start time: 2019/11/28 07:13:57 GMT
+
+End reading old data with keyword is IoT. End time: 2019/11/28 07:13:57 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: IoT. Start time: 2019/11/28
+07:13:57 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=IoT
+Charset: UTF-8
+
+	-Reading and fill data of every item url
 
 ========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:28:46 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911274039
+Date: 2019/11/28 07:14:03 GMT
+   java.io.IOException: Mark invalid
+
 ========================================================================================================================
 
 ========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:28:46 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911193688
+Date: 2019/11/28 07:14:16 GMT
+   java.io.IOException: Mark invalid
+
 ========================================================================================================================
 
 2. Keyword IoT.
-Total time 0 hours 0 minutes 24 seconds 
+Total time 0 hours 0 minutes 19 seconds 
+
+Reading old data with keyword is ハプティクス. Start time: 2019/11/28 07:14:16 GMT
+
+End reading old data with keyword is ハプティクス. End time: 2019/11/28 07:14:16 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: ハプティクス. Start time: 2019/11/28
+07:14:16 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=ハプティクス
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+	-Writing data to end of data_storage.
 
 3. Keyword ハプティクス.
 Total time 0 hours 0 minutes 2 seconds 
+
+Reading old data with keyword is ロボティクス. Start time: 2019/11/28 07:14:18 GMT
+
+End reading old data with keyword is ロボティクス. End time: 2019/11/28 07:14:18 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: ロボティクス. Start time: 2019/11/28
+07:14:18 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=ロボティクス
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201908219863
+Date: 2019/11/28 07:14:34 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+4. Keyword ロボティクス.
+Total time 0 hours 0 minutes 20 seconds 
+
+Reading old data with keyword is ロボット. Start time: 2019/11/28 07:14:38 GMT
+
+End reading old data with keyword is ロボット. End time: 2019/11/28 07:14:38 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: ロボット. Start time: 2019/11/28
+07:14:38 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=ロボット
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+	-Writing data to end of data_storage.
+
+5. Keyword ロボット.
+Total time 0 hours 0 minutes 23 seconds 
+
+Reading old data with keyword is 触覚. Start time: 2019/11/28 07:15:01 GMT
+
+End reading old data with keyword is 触覚. End time: 2019/11/28 07:15:01 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: 触覚. Start time: 2019/11/28
+07:15:01 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=触覚
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201807236218
+Date: 2019/11/28 07:15:10 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201804042656
+Date: 2019/11/28 07:15:12 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201707284179
+Date: 2019/11/28 07:15:14 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+6. Keyword 触覚.
+Total time 0 hours 0 minutes 13 seconds 
+
+Reading old data with keyword is 遠隔操作. Start time: 2019/11/28 07:15:14 GMT
+
+End reading old data with keyword is 遠隔操作. End time: 2019/11/28 07:15:14 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: 遠隔操作. Start time: 2019/11/28
+07:15:14 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=遠隔操作
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201909301573
+Date: 2019/11/28 07:15:19 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+7. Keyword 遠隔操作.
+Total time 0 hours 0 minutes 20 seconds 
+
+Reading old data with keyword is 遠隔会議. Start time: 2019/11/28 07:15:34 GMT
+
+End reading old data with keyword is 遠隔会議. End time: 2019/11/28 07:15:34 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: 遠隔会議. Start time: 2019/11/28
+07:15:34 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=遠隔会議
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+	-Writing data to end of data_storage.
+
+8. Keyword 遠隔会議.
+Total time 0 hours 0 minutes 8 seconds 
+
+Reading old data with keyword is 遠隔医療. Start time: 2019/11/28 07:15:42 GMT
+
+End reading old data with keyword is 遠隔医療. End time: 2019/11/28 07:15:42 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: 遠隔医療. Start time: 2019/11/28
+07:15:42 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=遠隔医療
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201810018605
+Date: 2019/11/28 07:15:47 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201807025560
+Date: 2019/11/28 07:15:50 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+9. Keyword 遠隔医療.
+Total time 0 hours 0 minutes 16 seconds 
+
+Reading old data with keyword is 宇宙. Start time: 2019/11/28 07:15:58 GMT
+
+End reading old data with keyword is 宇宙. End time: 2019/11/28 07:15:58 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: 宇宙. Start time: 2019/11/28
+07:15:58 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=宇宙
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+	-Writing data to end of data_storage.
+
+10. Keyword 宇宙.
+Total time 0 hours 0 minutes 16 seconds 
+
+Reading old data with keyword is 医療. Start time: 2019/11/28 07:16:14 GMT
+
+End reading old data with keyword is 医療. End time: 2019/11/28 07:16:14 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: 医療. Start time: 2019/11/28
+07:16:14 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=医療
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911253908
+Date: 2019/11/28 07:16:27 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+11. Keyword 医療.
+Total time 0 hours 0 minutes 19 seconds 
+
+Reading old data with keyword is MR. Start time: 2019/11/28 07:16:33 GMT
+
+End reading old data with keyword is MR. End time: 2019/11/28 07:16:33 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: MR. Start time: 2019/11/28
+07:16:33 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=MR
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911274072
+Date: 2019/11/28 07:16:38 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+12. Keyword MR.
+Total time 0 hours 0 minutes 13 seconds 
+
+Reading old data with keyword is VR. Start time: 2019/11/28 07:16:46 GMT
+
+End reading old data with keyword is VR. End time: 2019/11/28 07:16:46 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: VR. Start time: 2019/11/28
+07:16:46 GMT
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/search?s=VR
+Date: 2019/11/28 07:16:49 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+13. Keyword VR.
+Total time 0 hours 0 minutes 3 seconds 
+
+Reading old data with keyword is デジタルサイネージ. Start time: 2019/11/28 07:16:49 GMT
+
+End reading old data with keyword is デジタルサイネージ. End time: 2019/11/28 07:16:49 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: デジタルサイネージ. Start time: 2019/11/28
+07:16:49 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=デジタルサイネージ
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201906137511
+Date: 2019/11/28 07:17:02 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+14. Keyword デジタルサイネージ.
+Total time 0 hours 0 minutes 15 seconds 
+
+Reading old data with keyword is 建設. Start time: 2019/11/28 07:17:04 GMT
+
+End reading old data with keyword is 建設. End time: 2019/11/28 07:17:04 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: 建設. Start time: 2019/11/28
+07:17:04 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=建設
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+	-Writing data to end of data_storage.
+
+15. Keyword 建設.
+Total time 0 hours 0 minutes 18 seconds 
+
+Reading old data with keyword is ANA AVATAR. Start time: 2019/11/28 07:17:22 GMT
+
+End reading old data with keyword is ANA AVATAR. End time: 2019/11/28 07:17:22 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: ANA AVATAR. Start time: 2019/11/28
+07:17:22 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=ANA AVATAR
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+	-Writing data to end of data_storage.
+
+16. Keyword ANA AVATAR.
+Total time 0 hours 0 minutes 23 seconds 
+
+Reading old data with keyword is シェアリングエコノミー. Start time: 2019/11/28 07:17:45 GMT
+
+End reading old data with keyword is シェアリングエコノミー. End time: 2019/11/28 07:17:45 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: シェアリングエコノミー. Start time:
+2019/11/28 07:17:45 GMT
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/search?s=シェアリングエコノミー
+Date: 2019/11/28 07:17:46 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+17. Keyword シェアリングエコノミー.
+Total time 0 hours 0 minutes 1 seconds 
+
+Reading old data with keyword is VR広告. Start time: 2019/11/28 07:17:46 GMT
+
+End reading old data with keyword is VR広告. End time: 2019/11/28 07:17:46 GMT
+
+	-Reading new url which doesn't exist in data_storage.
+
+Reading top n keyword & checking exist item on old data. Website: kyodonews .Keyword: VR広告. Start time: 2019/11/28
+07:17:46 GMT
+
+Reading https://kyodonewsprwire.jp/search?s=VR広告
+Charset: UTF-8
+
+	-Reading and fill data of every item url
+
+	-Writing data to output excel file.
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+	-Writing data to end of data_storage.
+
+18. Keyword VR広告.
+Total time 0 hours 0 minutes 7 seconds 
+
+Finished getting data from kyodonews. 
+Total time 0 hours 4 minutes 19 seconds 
+
+Finished ANA-1 Project. 
+Total time 0 hours 4 minutes 19 seconds 
+
+************************************************************************************************************************
+*End time:                                       2019/11/28 07:17:53 GMT                                               *
+************************************************************************************************************************
 

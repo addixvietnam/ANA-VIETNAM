@@ -1,12 +1,128 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 04:02:09 GMT                                               *
+*Start time:                                     2019/11/28 04:29:04 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Finished init ana Project (read input.xlsx). Total time 
+Finished init ana Project (read input.xlsx). 
+Total time 0 hours 0 minutes 1 seconds 
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/28 04:02:10
-GMT
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+1. Keyword AI.
+Total time 0 hours 0 minutes 24 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+2. Keyword IoT.
+Total time 0 hours 0 minutes 23 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+3. Keyword ハプティクス.
+Total time 0 hours 0 minutes 2 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+4. Keyword ロボティクス.
+Total time 0 hours 0 minutes 24 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+5. Keyword ロボット.
+Total time 0 hours 0 minutes 26 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+6. Keyword 触覚.
+Total time 0 hours 0 minutes 25 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+7. Keyword 遠隔操作.
+Total time 0 hours 0 minutes 24 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+8. Keyword 遠隔会議.
+Total time 0 hours 0 minutes 1 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+9. Keyword 遠隔医療.
+Total time 0 hours 0 minutes 7 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+10. Keyword 宇宙.
+Total time 0 hours 0 minutes 25 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+11. Keyword 医療.
+Total time 0 hours 0 minutes 25 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+12. Keyword MR.
+Total time 0 hours 0 minutes 23 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+13. Keyword VR.
+Total time 0 hours 0 minutes 23 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+14. Keyword デジタルサイネージ.
+Total time 0 hours 0 minutes 14 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+15. Keyword 建設.
+Total time 0 hours 0 minutes 22 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+16. Keyword ANA AVATAR.
+Total time 0 hours 0 minutes 2 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+17. Keyword シェアリングエコノミー.
+Total time 0 hours 0 minutes 23 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+
+18. Keyword VR広告.
+Total time 0 hours 0 minutes 2 seconds 
+
+Finished getting data from techable. 
+Total time 0 hours 5 minutes 15 seconds 
+
+Finished ANA-1 Project. 
+Total time 0 hours 5 minutes 15 seconds 
+
+************************************************************************************************************************
+*End time:                                       2019/11/28 04:34:20 GMT                                               *
+************************************************************************************************************************
 

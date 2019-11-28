@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 04:25:13 GMT                                               *
+*Start time:                                     2019/11/28 06:42:36 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -9,80 +9,90 @@ Finished init ana Project (read input.xlsx).
 Total time 0 hours 0 minutes 0 seconds 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
 
 1. Keyword AI.
-Total time 0 hours 0 minutes 26 seconds 
+Total time 0 hours 26 minutes 39 seconds 
 
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911274039
+Date: 2019/11/28 07:10:43 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
 
 2. Keyword IoT.
-Total time 0 hours 0 minutes 25 seconds 
+Total time 0 hours 0 minutes 14 seconds 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:26:06 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
-========================================================================================================================
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:26:06 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
-========================================================================================================================
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
 
 3. Keyword ハプティクス.
 Total time 0 hours 0 minutes 2 seconds 
 
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
-
 ========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:26:30 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201909040382
+Date: 2019/11/28 07:11:06 GMT
+   java.io.IOException: Mark invalid
+
 ========================================================================================================================
 
 ========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:26:30 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201908219863
+Date: 2019/11/28 07:11:08 GMT
+   java.io.IOException: Mark invalid
+
 ========================================================================================================================
 
 4. Keyword ロボティクス.
-Total time 0 hours 0 minutes 24 seconds 
+Total time 0 hours 0 minutes 16 seconds 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:26:54 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
-========================================================================================================================
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techable.xlsx
-Date: 2019/11/28 04:26:54 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techable.xlsx (The process cannot access the file
-   because it is being used by another process)
-========================================================================================================================
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
 
 5. Keyword ロボット.
-Total time 0 hours 0 minutes 24 seconds 
+Total time 0 hours 0 minutes 12 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201804042656
+Date: 2019/11/28 07:11:31 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+6. Keyword 触覚.
+Total time 0 hours 0 minutes 10 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911063141
+Date: 2019/11/28 07:11:34 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+7. Keyword 遠隔操作.
+Total time 0 hours 0 minutes 12 seconds 
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/kyodonews/20191128_kyodonews.xlsx
+
+8. Keyword 遠隔会議.
+Total time 0 hours 0 minutes 7 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/search?s=遠隔医療
+Date: 2019/11/28 07:11:52 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
+
+9. Keyword 遠隔医療.
+Total time 0 hours 0 minutes 1 seconds 
+
+========================================================================================================================
+Error Error JSoup read page https://kyodonewsprwire.jp/release/201911263953
+Date: 2019/11/28 07:11:55 GMT
+   java.io.IOException: Mark invalid
+
+========================================================================================================================
 

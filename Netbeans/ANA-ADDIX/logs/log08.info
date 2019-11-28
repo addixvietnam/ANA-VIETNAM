@@ -1,14 +1,17 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 04:14:27 GMT                                               *
+*Start time:                                     2019/11/28 06:08:30 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 0 seconds 	Begin time: 2019/11/28 04:14:27
-GMT	End time: 2019/11/28 04:14:27 GMT
+========================================================================================================================
+Error Read Input Excel Error (D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/input/input.xlsx)
+Date: 2019/11/28 06:08:30 GMT
+   java.lang.NumberFormatException: null
 
-Reading top n keyword & checking exist item on old data. Website: techable .Keyword: AI. Start time: 2019/11/28 04:14:28
-GMT
+========================================================================================================================
+
+Finished getting data from wired. 
+Total time 0 hours 0 minutes 0 seconds 
 

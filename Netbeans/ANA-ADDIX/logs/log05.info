@@ -1,24 +1,7 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 04:22:33 GMT                                               *
+*Start time:                                     2019/11/28 06:11:11 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
-
-Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 1 seconds 
-
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/techable/20191128_techable.xlsx
-
-========================================================================================================================
-Error Error Write Output To Excel File D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storge/techablexlsx
-Date: 2019/11/28 04:22:59 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storge\techablexlsx (The system cannot find the file
-   specified)
-========================================================================================================================
-
-1. Keyword AI.
-Total time 0 hours 0 minutes 25 seconds 
 

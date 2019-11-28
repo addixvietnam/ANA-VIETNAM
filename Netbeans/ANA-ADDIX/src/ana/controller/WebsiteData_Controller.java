@@ -61,6 +61,7 @@ public class WebsiteData_Controller {
                 GlobalVars.ERRORS = 1;
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                     GlobalVars.LOG_ADDIX.formatStringError("Error JSoup read page " + urlItem, ex.toString()));     
+                ex.printStackTrace();
             }
         }   
         return true;
