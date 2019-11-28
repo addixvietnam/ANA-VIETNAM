@@ -10,6 +10,7 @@ import ana.model.Website;
 import ana.model.WebsiteData;
 import ana.model.WebsiteElement;
 import ana.model.WebsiteInProject;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -53,7 +54,8 @@ public class GlobalVars {
     public static int TOTAL_URL_ITEM = 0;
 
     public static void setGlobalVariables(String[] array){
-        WORK_DIRECTORY = array[0];
+//        WORK_DIRECTORY = array[0];
+        WORK_DIRECTORY = Paths.get("").toAbsolutePath().toString();
         DEBUG = Integer.parseInt(array[1]);
         MULTI_MACHINE = Integer.parseInt(array[2]);
         MULTI_THREAD = Integer.parseInt(array[3]);

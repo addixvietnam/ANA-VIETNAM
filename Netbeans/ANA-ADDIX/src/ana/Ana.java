@@ -25,7 +25,7 @@ import vn.addix.utils.AddixExcel;
 import vn.addix.utils.Log;
 import vn.addix.utils.Utilities;
 
-public class Ana {
+public class Ana {    
     /**
      * Main function of program
      * @param args 
@@ -36,7 +36,7 @@ public class Ana {
             GlobalVars.LIB_COMMON = new CommonFunctions();               
             Ana myProgram = new Ana();
             //Read some config variables from Config.md file
-            myProgram.initProgram();
+            myProgram.initProgram();            
             //Init variables for Log file
             GlobalVars.LOG_ADDIX = new Log(GlobalVars.LOG_WIDTH_SIZE, GlobalVars.LOG_NUMBER_SPACE_ERROR, 
                     GlobalVars.LOG_CHARACTER_HEADER, GlobalVars.LOG_CHARACTER_ERROR);               
@@ -63,11 +63,14 @@ public class Ana {
         GlobalVars.PATH_INPUT_FILE = GlobalVars.WORK_DIRECTORY + "/input/input.xlsx";        
         //Read input variables from input.xlsx file
         initAnaProject(GlobalVars.PATH_INPUT_FILE);
-        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");        
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");       
+        
+        String startProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
+        
         for (Map.Entry<String, Website> presentWebsite : GlobalVars.MAP_WEBSITE.getWebsites().entrySet()) {
             //Read all old url item of 1 website from data_storage
             GlobalVars.MAP_OLD_DATA = new HashMap<>();//free & reallocate memory for old data          
-            String startProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
+//            String startProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
             String webName = presentWebsite.getKey().trim();
             String strOutExcelFile = "";
             System.out.println("Processing data with website " + webName);
@@ -125,6 +128,9 @@ public class Ana {
                 
             }            
         }
+        String endProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
+        GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                        GlobalVars.LOG_ADDIX.formatStringContent("Finished ANA-1 Project. Total time: " + startProjectTime));  
         System.out.println("Finished program");
     }
     /**
@@ -195,12 +201,11 @@ public class Ana {
      */
     public void initAnaProject(String inputExcelFile){     
         try {
-            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                        GlobalVars.LOG_ADDIX.formatStringContent("Starting init ana Project"));
+            String startInitAnaTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
             
             if(GlobalVars.DEBUG == 1){
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                        GlobalVars.LOG_ADDIX.formatStringContent("Reading from input excel file"));
+                        GlobalVars.LOG_ADDIX.formatStringContent("Starting init ana Project. \nReading from input excel file"));
             }
             AddixExcel libExcelFile = new AddixExcel(inputExcelFile) {
                 @Override
@@ -263,9 +268,10 @@ public class Ana {
                 GlobalVars.ARRAY_KEYWORD[i] = keywordData[i][0];
 //                System.out.println(i + " => " + keywordData[i][0]);
             }            
-            
+            String endInitAnaTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                        GlobalVars.LOG_ADDIX.formatStringContent("Finished init ana Project"));
+                        GlobalVars.LOG_ADDIX.formatStringContent("Finished init ana Project (read input.xlsx). Total time " + CommonFunctions.getTotalWaitTime(startInitAnaTime, endInitAnaTime)));
+            
         } catch (Exception ex) {
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                     GlobalVars.LOG_ADDIX.formatStringError("Read Input Excel Error (" + inputExcelFile + ")", ex.toString()));
