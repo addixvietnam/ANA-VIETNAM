@@ -16,10 +16,20 @@ public class WebsiteElement {
     private String trdl = "";
     private int numClickSort = 0;
     private String strPaging = "";
-    private int type = 1;
+    
     private int saveMethod = 1;
     private int numReadPage = 1;    
     private String itemPageElement = "";
+    
+    private int crawlSwitch = 1;
+    private int saveSwitch = 1;
+    private int crawlMethod = 1;    
+    private int loadWaitTime = 1;
+    private int saveWaitTime = 1;
+    private String xPathNextPage = "";
+    private String webName = "";
+    private int pageNum = 1;
+    private String url = "";
 
     public int getSaveMethod() {
         return saveMethod;
@@ -40,28 +50,39 @@ public class WebsiteElement {
     public WebsiteElement() {
     }
 
-    public WebsiteElement(int idWebsite, int id, String href, String title, String postDate,
-            String source, String content, int numClickSearch, String strNextPage,
-            String domain, String strReplaceNextPage, int caseDisplay, 
-            int numClickSort, String strPaging, int type, int saveMethod, int numReadPage, String itemPageElement) {
+    public WebsiteElement(int idWebsite, int id, String webName, 
+            int crawlSwitch, int saveSwitch, int crawlMethod, int saveMethod,
+            int pageNum, int loadWaitTime, int saveWaitTime,
+            String url, String classHref, String classTitle, String classPostDate,
+            String classSource, String classContent, int clickSearch,
+            String classNextPage, String domain, String replaceNextPage,
+            int caseDisplay, String classTrDl, int clickSort, 
+            String itemPageElement, String xPathNextPage) {
         this.idWebsite = idWebsite;
         this.id = id;
-        this.href = href;
-        this.title = title;    
-        this.postDate = postDate;    
-        this.source = source;    
-        this.content = content;            
-        this.numClickSearch = numClickSearch;    
-        this.strNextPage = strNextPage;    
-        this.domain = domain;    
-        this.strReplaceNextPage = strReplaceNextPage;          
-        this.caseDisplay = caseDisplay;        
-        this.numClickSort = numClickSort;
-        this.strPaging = strPaging;           
-        this.type = type;  
+        this.webName = webName;
+        this.crawlSwitch = crawlSwitch;
+        this. saveSwitch = saveSwitch;
+        this.crawlMethod = crawlMethod;
         this.saveMethod = saveMethod;
-        this.numReadPage = numReadPage;        
+        this.numReadPage = pageNum;
+        this.loadWaitTime = loadWaitTime;
+        this.saveWaitTime = saveWaitTime;
+        this.url = url;
+        this.href = classHref;
+        this.title = classTitle;
+        this.postDate = classPostDate;
+        this.source = classSource;
+        this.content = classContent;
+        this.numClickSearch = clickSearch;
+        this.strNextPage = classNextPage;
+        this.domain = domain;
+        this.strReplaceNextPage = replaceNextPage;
+        this.caseDisplay = caseDisplay;
+        this.trdl = classTrDl;
+        this.numClickSort = clickSort;
         this.itemPageElement = itemPageElement;
+        this.xPathNextPage = xPathNextPage;
     }
 
     public String getItemPageElement() {
@@ -192,13 +213,76 @@ public class WebsiteElement {
         this.strPaging = strPaging;
     }
 
-    public int getType() {
-        return type;
+    public int getCrawlSwitch() {
+        return crawlSwitch;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setCrawlSwitch(int crawlSwitch) {
+        this.crawlSwitch = crawlSwitch;
     }
-    
+
+    public int getSaveSwitch() {
+        return saveSwitch;
+    }
+
+    public void setSaveSwitch(int saveSwitch) {
+        this.saveSwitch = saveSwitch;
+    }
+
+    public int getCrawlMethod() {
+        return crawlMethod;
+    }
+
+    public void setCrawlMethod(int crawlMethod) {
+        this.crawlMethod = crawlMethod;
+    }
+
+    public int getLoadWaitTime() {
+        return loadWaitTime;
+    }
+
+    public void setLoadWaitTime(int loadWaitTime) {
+        this.loadWaitTime = loadWaitTime;
+    }
+
+    public int getSaveWaitTime() {
+        return saveWaitTime;
+    }
+
+    public void setSaveWaitTime(int saveWaitTime) {
+        this.saveWaitTime = saveWaitTime;
+    }
+
+    public String getxPathNextPage() {
+        return xPathNextPage;
+    }
+
+    public void setxPathNextPage(String xPathNextPage) {
+        this.xPathNextPage = xPathNextPage;
+    }
+
+    public String getWebName() {
+        return webName;
+    }
+
+    public void setWebName(String webName) {
+        this.webName = webName;
+    }    
+
+    public int getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(int pageNum) {
+        this.pageNum = pageNum;
+    }        
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
     
 }

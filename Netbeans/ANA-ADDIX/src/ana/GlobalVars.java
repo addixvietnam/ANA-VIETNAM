@@ -1,7 +1,9 @@
 
 package ana;
 
+import ana.controller.Automation;
 import ana.controller.CommonFunctions;
+import ana.controller.ProcessingUrl;
 import ana.controller.Project_Controller;
 import ana.controller.WebsiteElement_Controller;
 import ana.controller.Website_Controller;
@@ -40,6 +42,7 @@ public class GlobalVars {
     //Global model variables
     public static Log LOG_ADDIX;
     public static CommonFunctions LIB_COMMON;
+    public static ProcessingUrl LIB_URL;
     public static Project_Controller MAP_PROJECTS = new Project_Controller();
     public static Website_Controller MAP_WEBSITE = new Website_Controller();
     public static WebsiteElement_Controller MAP_WEBSITE_ELEMENTS = new WebsiteElement_Controller();
@@ -48,6 +51,7 @@ public class GlobalVars {
 //    public static Map<String, WebsiteData> webDataMap = new HashMap<>();
     public static Map<String, Boolean> MAP_ITEM_URL;
     public static ArrayList<WebsiteData> LIST_WEBSITE_DATA;
+    public static Automation LIB_SELENIUM;
     //Global input & output file
     public static String PATH_INPUT_FILE = "";
     public static int TOTAL_PAGE = 1;

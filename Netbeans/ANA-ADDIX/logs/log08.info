@@ -1,17 +1,171 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 06:08:30 GMT                                               *
+*Start time:                                     2019/12/05 03:49:33 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-========================================================================================================================
-Error Read Input Excel Error (D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/input/input.xlsx)
-Date: 2019/11/28 06:08:30 GMT
-   java.lang.NumberFormatException: null
 
-========================================================================================================================
+Finished init ana Project (read input.xlsx). 
+Total time 0 hours 0 minutes 1 seconds 
+
+
+Processing data with website wired
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+1. Keyword AI.
+Total time 0 hours 0 minutes 27 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+2. Keyword IoT.
+Total time 0 hours 0 minutes 26 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+3. Keyword ハプティクス.
+Total time 0 hours 0 minutes 26 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+4. Keyword ロボティクス.
+Total time 0 hours 0 minutes 23 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+5. Keyword ロボット.
+Total time 0 hours 0 minutes 28 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+6. Keyword 触覚.
+Total time 0 hours 0 minutes 29 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+7. Keyword 遠隔操作.
+Total time 0 hours 0 minutes 28 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+8. Keyword 遠隔会議.
+Total time 0 hours 0 minutes 26 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+9. Keyword 遠隔医療.
+Total time 0 hours 0 minutes 29 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+10. Keyword 宇宙.
+Total time 0 hours 0 minutes 24 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+11. Keyword 医療.
+Total time 0 hours 0 minutes 32 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+12. Keyword MR.
+Total time 0 hours 0 minutes 31 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+13. Keyword VR.
+Total time 0 hours 0 minutes 25 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+14. Keyword デジタルサイネージ.
+Total time 0 hours 0 minutes 30 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+15. Keyword 建設.
+Total time 0 hours 0 minutes 27 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+16. Keyword ANA AVATAR.
+Total time 0 hours 0 minutes 31 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+17. Keyword シェアリングエコノミー.
+Total time 0 hours 0 minutes 23 seconds 
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/wired/20191205_wired.xlsx
+
+
+18. Keyword VR広告.
+Total time 0 hours 0 minutes 23 seconds 
+
 
 Finished getting data from wired. 
-Total time 0 hours 0 minutes 0 seconds 
+Total time 0 hours 8 minutes 8 seconds 
+
+
+Finished ANA Project. 
+Total time 0 hours 8 minutes 8 seconds 
+
+
+************************************************************************************************************************
+*End time:                                       2019/12/05 03:57:42 GMT                                               *
+************************************************************************************************************************
 

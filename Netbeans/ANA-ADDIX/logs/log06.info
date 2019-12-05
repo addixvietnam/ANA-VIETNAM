@@ -1,17 +1,23 @@
 ************************************************************************************************************************
-*Start time:                                     2019/11/28 06:10:02 GMT                                               *
+*Start time:                                     2019/12/05 04:15:19 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
 	D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX
 
-========================================================================================================================
-Error Read Input Excel Error (D:\MyProjects\Sources\11. ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/input/input.xlsx)
-Date: 2019/11/28 06:10:02 GMT
-   java.lang.NumberFormatException: null
 
-========================================================================================================================
-
-Finished getting data from wired. 
+Finished init ana Project (read input.xlsx). 
 Total time 0 hours 0 minutes 0 seconds 
+
+
+Processing data with website newswitch
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/newswitch/20191205_newswitch.xlsx
+
+
+1. Keyword AI.
+Total time 0 hours 0 minutes 20 seconds 
+
 

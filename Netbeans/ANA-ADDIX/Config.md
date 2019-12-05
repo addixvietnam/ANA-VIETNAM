@@ -1,5 +1,5 @@
 Work directory = D:/MyProjects/Sources/11. ChangeCodeANA/ANA-VIETNAM/Netbeans/ANA-ADDIX
-Debug mode = 1
+Debug mode = 0
 Multi machine = 0
 Multi thread = 0
 List machines = list_machines.md
