@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/05 04:46:12 GMT                                               *
+*Start time:                                     2019/12/11 05:01:00 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,43 +7,29 @@ WORKING DIRECTORY:
 
 
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 0 seconds 
+Total time 0 hours 0 minutes 1 seconds 
 
 
-Processing data with website newswitch
+Processing data with website response
 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/newswitch/20191205_newswitch.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/response/20191211_response.xlsx
 
 
 1. Keyword AI.
-Total time 0 hours 0 minutes 24 seconds 
+Total time 0 hours 3 minutes 19 seconds 
 
 
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/newswitch/20191205_newswitch.xlsx
+Finished getting data from response. 
+Total time 0 hours 3 minutes 19 seconds 
 
 
-2. Keyword IoT.
-Total time 0 hours 0 minutes 33 seconds 
+Finished ANA Project. 
+Total time 0 hours 3 minutes 28 seconds 
 
 
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/newswitch/20191205_newswitch.xlsx
-
-
-========================================================================================================================
-
-Error Write Output To Excel File D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/newswitch/20191205_newswitch.xlsx
-Date: 2019/12/05 04:47:41 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_page_source\HTML\newswitch\20191205_newswitch.xlsx (The
-   process cannot access the file because it is being used by another process)
-========================================================================================================================
-
-3. Keyword ハプティクス.
-Total time 0 hours 0 minutes 32 seconds 
-
+************************************************************************************************************************
+*End time:                                       2019/12/11 05:04:29 GMT                                               *
+************************************************************************************************************************
 

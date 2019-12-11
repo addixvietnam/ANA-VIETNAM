@@ -1,17 +1,23 @@
 package ana;
 
+import ana.controller.DownloadHref;
+import ana.controller.SeleniumAdapter;
 import ana.controller.WebsiteData_Controller;
 import ana.model.Project;
 import ana.model.Website;
 import ana.model.WebsiteElement;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import vn.addix.utils.AddixConfig;
 import vn.addix.utils.AddixExcel;
 import vn.addix.utils.Utilities;
@@ -39,17 +45,7 @@ public class AnaProcessing {
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                         GlobalVars.LOG_ADDIX.formatStringContent("Starting init ana Project. \nReading from input excel file"));
             }
-            AddixExcel libExcelFile = new AddixExcel(inputExcelFile) {
-                @Override
-                public boolean writeExcelFile(String string, String[][] strings) {
-                    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                }
-                
-                @Override
-                public boolean writeExcelFile(String string, int i, int i1, String[][] strings) {
-                    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                }
-            };
+            ExcelCommon libExcelFile = new ExcelCommon(inputExcelFile);
             String[][] inputData = libExcelFile.readExcelFile("website", true, null);
             
 //            printDataInputTest(inputData);
@@ -95,11 +91,17 @@ public class AnaProcessing {
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                         GlobalVars.LOG_ADDIX.formatStringContent("Adding data to keyword of website (use array)"));
             }
-            String[][] keywordData = libExcelFile.readExcelFile("keyword", true, null);
-            GlobalVars.ARRAY_KEYWORD = new String[keywordData.length];
+//            String[][] keywordData = libExcelFile.readExcelFile("keyword", true, null);
+            int[] columnArray = {0,1};
+            String[][] keywordData = libExcelFile.readColumns("keyword", columnArray);
+            ArrayList<String> strKeyword = new ArrayList<>();
             for(int i = 0; i < keywordData.length; i++){
-                GlobalVars.ARRAY_KEYWORD[i] = keywordData[i][0];
-            }            
+                if(keywordData[i][1].equals("1")){
+                    strKeyword.add(keywordData[i][0]);
+                }
+            }
+            GlobalVars.ARRAY_KEYWORD = strKeyword.toArray(new String[0]);
+            
             String endInitAnaTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                         GlobalVars.LOG_ADDIX.formatStringContent("Finished init ana Project (read input.xlsx). \nTotal time " + 
@@ -123,7 +125,9 @@ public class AnaProcessing {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");       
         
         String startProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
-        
+        GlobalVars.LIB_SELENIUM.setChromeDriver();
+        GlobalVars.seleniumAdapter.setDriver(GlobalVars.LIB_SELENIUM.getSeleniumDriver());
+        writeStatusDownload(GlobalVars.WORK_DIRECTORY + "\\output\\download.txt", 0);
         for (Map.Entry<String, Website> presentWebsite : GlobalVars.MAP_WEBSITE.getWebsites().entrySet()) {            
             //Read all old url item of 1 website from data_storage
             GlobalVars.MAP_OLD_DATA = new HashMap<>();//free & reallocate memory for old data          
@@ -135,7 +139,7 @@ public class AnaProcessing {
                 System.out.println("Processing data with website " + webName);
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                         GlobalVars.LOG_ADDIX.formatStringContent("Processing data with website " + webName));
-
+                Map downloadedLinks = new HashMap();
                 //Copy from input excel template to output file
                 try{
                     // Get date time follow format yyyyMMdd                
@@ -158,12 +162,9 @@ public class AnaProcessing {
 
                 //Read data from website
                 String webSearch = GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getUrl();
-//                if(GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getCrawlMethod() == 2){
-//                    GlobalVars.LIB_SELENIUM.setChromeDriver();
-//                }
-                
-//                String webSearch = presentWebsite.getValue().getUrl().trim();     
-                for(int i = 0; i < GlobalVars.ARRAY_KEYWORD.length; i++){
+
+//                for(int i = 0; i < 1; i++){
+                for(int i = 0; i < GlobalVars.ARRAY_KEYWORD.length; i++){    
                     if(GlobalVars.ARRAY_KEYWORD[i].trim().equals("AI") && webName.trim().equals("gigazine")){
                         //Skip this action
                     }else{
@@ -188,15 +189,11 @@ public class AnaProcessing {
                                 //read new url item from website with a keyword. Then save to arrItemUrl, arrItemTitle                    
                                 anaGettingData.readDataKeywordWebsite(presentWebsite.getKey().trim(), GlobalVars.ARRAY_KEYWORD[i].trim(), webSearch, false);
                             }else{//ANA-2      
-                                GlobalVars.LIB_SELENIUM.setChromeDriver();
+//                                GlobalVars.LIB_SELENIUM.setChromeDriver();
                                 anaGettingData.readDataKeywordWebsite(presentWebsite.getKey().trim(), GlobalVars.ARRAY_KEYWORD[i].trim(), webSearch, true);                            
-                                GlobalVars.LIB_SELENIUM.close();
-                                
+//                                GlobalVars.LIB_SELENIUM.close();                                
                             }
                         }
-//                        if(GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getCrawlMethod() == 2){
-//                            GlobalVars.LIB_SELENIUM.close();
-//                        }                        
 
                         WebsiteData_Controller myOutputData = new WebsiteData_Controller();
                         if(GlobalVars.ERRORS == 0){
@@ -214,6 +211,11 @@ public class AnaProcessing {
                                         GlobalVars.LOG_ADDIX.formatStringContent("\t-Writing data to output excel file."));  
                             }
                             System.out.println("\t-Writing data to output excel file.");
+//                            for(int bo = 0; bo < GlobalVars.LIST_WEBSITE_DATA.size(); bo++){
+//                                System.out.println("+++++++++++++++++++++++++++++++++++++");
+//                                System.out.println(bo + " Link web: " + GlobalVars.LIST_WEBSITE_DATA.get(bo).getUrlArticle());
+//                                System.out.println(GlobalVars.LIST_WEBSITE_DATA.get(bo).getAllText());
+//                            }
                             //Write data (only 1 keyword) to output excel file
                             myOutputData.writeToOutputExcelFile(strOutExcelFile, "Sheet1", GlobalVars.LIST_WEBSITE_DATA, webName, GlobalVars.ARRAY_KEYWORD[i].trim());
 
@@ -224,13 +226,22 @@ public class AnaProcessing {
                                         GlobalVars.LOG_ADDIX.formatStringContent("\t-Writing data to end of data_storage."));  
                             }
                             System.out.println("\t-Writing data to end of data_storage");
-                            myOutputData.writeToEndStorageExcelFile(GlobalVars.WORK_DIRECTORY + "/output/data_storge/" + webName.toLowerCase().trim() + ".xlsx", 
+                            //Write to end of file in data storage
+                            myOutputData.writeToEndStorageExcelFile(GlobalVars.WORK_DIRECTORY + "/output/data_storage/" + webName.toLowerCase().trim() + ".xlsx", 
                                     GlobalVars.ARRAY_KEYWORD[i].trim(), GlobalVars.LIST_WEBSITE_DATA);
                         }
-
-                        //Write to end of file in data storage
-                        myOutputData.writeToEndStorageExcelFile(GlobalVars.WORK_DIRECTORY + "/output/data_storge/" + webName.toLowerCase() + ".xlsx", 
-                                GlobalVars.ARRAY_KEYWORD[i].trim().toUpperCase(), GlobalVars.LIST_WEBSITE_DATA);
+                        if(GlobalVars.ERRORS == 0){
+                            if(GlobalVars.DEBUG == 1){
+                                GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                                        GlobalVars.LOG_ADDIX.formatStringContent("\t-Downloading HTML page source."));  
+                            }
+                            System.out.println("\t-Downloading HTML page source");
+//                            SeleniumAdapter seleniumAdapter = new SeleniumAdapter();
+                            String htmlDir = GlobalVars.WORK_DIRECTORY + "\\output\\data_page_source\\HTML\\" + webName + "\\HTML\\" + GlobalVars.ARRAY_KEYWORD[i].trim();
+                            String downloadsDir = GlobalVars.WORK_DIRECTORY + "\\output\\data_page_source\\HTML\\" + webName + "\\HTML\\downloads";
+                            
+                            downloadAddix(downloadedLinks, downloadsDir, htmlDir);                            
+                        }
 
                         String endKeywordTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
                         GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
@@ -238,7 +249,7 @@ public class AnaProcessing {
                                     Utilities.getTotalWaitTime(beginKeywordTime, endKeywordTime, "yyyy/MM/dd HH:mm:ss z")));
                     }                    
                 }            
-
+                writeStatusDownload(GlobalVars.WORK_DIRECTORY + "\\output\\download.txt", 1);
                 String endWebsiteTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                             GlobalVars.LOG_ADDIX.formatStringContent("Finished getting data from " + webName + ". \nTotal time " + 
@@ -246,6 +257,7 @@ public class AnaProcessing {
                 
             }                  
         }
+        GlobalVars.LIB_SELENIUM.close(); 
         String endProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
         GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                         GlobalVars.LOG_ADDIX.formatStringContent("Finished ANA Project. \nTotal time " + 
@@ -253,7 +265,42 @@ public class AnaProcessing {
         System.out.println("Finished program");
         
     }   
-    
+    public void downloadAddix(Map downloadedLinks, String downloadsDir, String htmlDir){
+        for(int iterDownload = 0; iterDownload < GlobalVars.LIST_WEBSITE_DATA.size(); iterDownload++){
+            String url = GlobalVars.LIST_WEBSITE_DATA.get(iterDownload).getUrlArticle();
+            String html = null;
+            System.out.println(iterDownload + ".Downloading page " + url);
+
+            if (downloadedLinks.containsKey(url)) {
+                html = (String) downloadedLinks.get(url);
+            } else {
+                GlobalVars.seleniumAdapter.connect(url);
+                html = GlobalVars.seleniumAdapter.getHtml();
+                downloadedLinks.put(url, html);
+            }
+            try {
+                DownloadHref.savePage(url, downloadsDir, htmlDir, html);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(AnaProcessing.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+    }
+    /**
+     * Using HCR to check status from file
+     * @param fileName
+     * @param status 0 not complete, 1 completed
+     */
+    public void writeStatusDownload(String fileName, int status){
+        try {
+            FileWriter writer = new FileWriter(fileName, false);
+            writer.write(Integer.toString(status));
+            writer.close();
+            System.out.println("File name: " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } 
+    }
     public void printDataInputTest(String[][] dataInput){
         for(int i = 0; i < 2; i ++){
             System.out.println("==========================");

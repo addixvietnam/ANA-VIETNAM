@@ -16,6 +16,7 @@ import java.util.Date;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -38,25 +39,36 @@ public class WebsiteData_Controller {
             String webName = GlobalVars.LIST_WEBSITE_DATA.get(i).getWebName().toString().trim();
             WebsiteElement elementWebsite = GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName);
             try{
-                Document urlItemDoc = Jsoup.connect(urlItem).get();
-                String charset = urlItemDoc.charset().toString();
-                
-                String post_date = urlItemDoc.select(elementWebsite.getPostDate().trim()).text();
-                String source = urlItemDoc.select(elementWebsite.getSource().trim() ).text();
-                Elements elementContents = urlItemDoc.select(elementWebsite.getContent().trim());
-                
-                String content = "";
-                for(Element elementChild : elementContents){
-                    if(content.length() == 0){
-                        content = content + elementChild.text();
-                    }else{
-                        content = content + "\n\r" + elementChild.text();
+                System.out.println("Reading urlItem " + urlItem);
+                Connection.Response response = Jsoup.connect(urlItem).ignoreHttpErrors(true).execute();
+                if(response.statusCode() == 200){//OK
+                    Document urlItemDoc = Jsoup.connect(urlItem).get();                    
+                    String charset = urlItemDoc.charset().toString();
+
+                    String post_date = urlItemDoc.select(elementWebsite.getPostDate().trim()).text();
+                    String source = urlItemDoc.select(elementWebsite.getSource().trim() ).text();
+                    String[] arrElementContext = elementWebsite.getContent().trim().split(",");
+                    String content = "";
+                    for(int iter = 0; iter < arrElementContext.length; iter++){
+                        Elements elementContents = urlItemDoc.select(elementWebsite.getContent().trim());
+                        for(Element elementChild : elementContents){
+                            if(content.length() == 0){
+                                content = content + elementChild.text();
+                            }else{
+                                content = content + "\n\r" + elementChild.text();
+                            }
+                        }
                     }
+                    //Check & cut limit characters in cell of MS.excel
+                    if(content.length() >= 32767){
+                        content = content.substring(0, 32767);
+                    }
+                    //Write to global variables
+                    GlobalVars.LIST_WEBSITE_DATA.get(i).setAllText(content);
+                    GlobalVars.LIST_WEBSITE_DATA.get(i).setSource(source);
+                    GlobalVars.LIST_WEBSITE_DATA.get(i).setPostDate(post_date);
                 }
-                //Write to global variables
-                GlobalVars.LIST_WEBSITE_DATA.get(i).setAllText(content);
-                GlobalVars.LIST_WEBSITE_DATA.get(i).setSource(source);
-                GlobalVars.LIST_WEBSITE_DATA.get(i).setPostDate(post_date);
+                
             }catch(Exception ex){
                 GlobalVars.ERRORS = 1;
                 GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 

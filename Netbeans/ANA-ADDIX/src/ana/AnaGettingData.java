@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -26,7 +28,7 @@ public class AnaGettingData {
      */
     public void readOldData1Keyword(String keyword, String webName){        
 
-        String oldFileName = GlobalVars.WORK_DIRECTORY + "\\output\\data_storge\\" + webName + ".xlsx";
+        String oldFileName = GlobalVars.WORK_DIRECTORY + "\\output\\data_storage\\" + webName + ".xlsx";
         
         GlobalVars.MAP_OLD_DATA = new HashMap<>();
         String[][] oldUrlItem = null;
@@ -60,9 +62,10 @@ public class AnaGettingData {
         }
 
         for(int row = 0; row < oldUrlItem.length; row++){
-            Map<String, Boolean> objValue = new HashMap<>();
-            objValue.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
-            GlobalVars.MAP_OLD_DATA.put(keyword.trim(), objValue);
+//            Map<String, Boolean> objValue = new HashMap<>();
+//            objValue.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
+//            GlobalVars.MAP_OLD_DATA.put(keyword.trim(), objValue);
+            GlobalVars.MAP_OLD_DATA.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
         }          
     }
  
@@ -91,9 +94,6 @@ public class AnaGettingData {
             if(isANA2){
                 int countPage = 1;
                 boolean isClickNextPage = false;
-//                if(!urlSearch.contains("(pagenum)")){
-//                    isClickNextPage = true;
-//                }
                 getTopNWebsiteItemANA2(myWeb, webName, keyword, countPage, isClickNextPage);
             }else{//get online url
                 getTopNWebsiteItem(myWeb, webName, keyword);
@@ -108,7 +108,7 @@ public class AnaGettingData {
                 }
                 while(numPageToRead > 0){
                     String myWeb = urlSearch.replace("(pagenum)", Integer.toString(pageNum));
-                    
+                    System.out.println("Working with page " + pageNum);
                     getTopNWebsiteItemANA2(myWeb, webName, keyword, countPage, isClickNextPage);
 
                     if(GlobalVars.TOTAL_PAGE == 1){
@@ -146,7 +146,7 @@ public class AnaGettingData {
         }
 
             for(int i = 0; i < GlobalVars.ARRAY_KEYWORD.length; i++){                
-                String oldFileName = GlobalVars.WORK_DIRECTORY + "\\output\\data_storge\\" + webName + ".xlsx";
+                String oldFileName = GlobalVars.WORK_DIRECTORY + "\\output\\data_storage\\" + webName + ".xlsx";
                 String[][] oldUrlItem = null;
                 
                 if(GlobalVars.DEBUG == 1){
@@ -178,9 +178,10 @@ public class AnaGettingData {
                 }
 
                 for(int row = 0; row < oldUrlItem.length; row++){
-                    Map<String, Boolean> objValue = new HashMap<>();
-                    objValue.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
-                    GlobalVars.MAP_OLD_DATA.put(GlobalVars.ARRAY_KEYWORD[i].trim(), objValue);
+//                    Map<String, Boolean> objValue = new HashMap<>();
+//                    objValue.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
+//                    GlobalVars.MAP_OLD_DATA.put(GlobalVars.ARRAY_KEYWORD[i].trim(), objValue);
+                    GlobalVars.MAP_OLD_DATA.put(oldUrlItem[row][0].trim(), Boolean.TRUE);
                 }
             }            
             myLog.writeLog(GlobalVars.LOG_FILE_NAME, myLog.formatStringContent("End reading all old data with website is " + 
@@ -214,116 +215,112 @@ public class AnaGettingData {
                     password.sendKeys("addix12");
                     GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"form-login\"]/input[2]")).click();
                     timeSleep.sleep(3);
+                }                
+            }else if(webName.trim().equals("nikkan")){
+                GlobalVars.LIB_SELENIUM.connect(childUrl);
+                if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector("#header > ul > li.entry > a")).size() != 0){
+                    GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.cssSelector("#header > ul > li.entry > a")).click();
+                    timeSleep.sleep(2);
+                    //Check login by account of nikkan
+                    if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.xpath("//*[@id=\"UserLicenseLoginForm\"]")).size() != 0){
+                        WebElement email = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"UserLicenseUsername\"]"));
+                        WebElement password = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"UserLicensePassword\"]"));
+                        email.sendKeys("quoc.nguyen@addix.vn");
+                        password.sendKeys("addix12");
+                        GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"UserLicenseLoginForm\"]/div/input")).click();
+                        timeSleep.sleep(3);
+                    } 
                 }
-                //Search if exist facebook, click it
-//                if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector("#login > div > div > div> a")).size() != 0){
-//                    GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.cssSelector("#login > div > div > div> a")).click();
-//                    timeSleep.sleep(1);
-//                    if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.id("u_0_1")).size() != 0){
-//                        GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.id("u_0_1")).click();
-//                        timeSleep.sleep(1);
-//                    }                    
-//                   //Check login by facebook
-//                   if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.id("email")).size() != 0){
-//                       WebElement email = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.id("email"));
-//                       WebElement password = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.id("pass"));
-//                       email.sendKeys("quoc.nguyen@addix.vn");
-//                       password.sendKeys("addix12");
-//                       GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.id("loginbutton")).click();
-//                       timeSleep.sleep(2);
-//                   }
-//                }
             }
             else{
                 if(pageNo == 1){
                     GlobalVars.LIB_SELENIUM.connect(childUrl);   
                     if((webName.trim().equals("ascii")) || (webName.trim().equals("japancnet")) 
                         || (webName.trim().equals("monoist")) || (webName.trim().equals("wired"))){
+                        timeSleep.sleep(3);
                         //Must click sort
                         GlobalVars.LIB_SELENIUM.click("gsc-option-selector");
                         GlobalVars.LIB_SELENIUM.click("gsc-option-menu");
                     }else if(webName.trim().equals("techcrunch")){
+                        timeSleep.sleep(1); 
                         GlobalVars.LIB_SELENIUM.click("sort-selector");
+                        timeSleep.sleep(2); 
                     }
                 }    
+                timeSleep.sleep(3);    
             }
-            timeSleep.sleep(3);
-            
-            childUrl = GlobalVars.LIB_SELENIUM.getCurrentUrl();
-            if(GlobalVars.DEBUG == 1){
-                GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                        GlobalVars.LOG_ADDIX.formatStringContent("Reading " + childUrl));
-            }
-            
-            String[] arrHref = webElement.getHref().trim().split(",");
-            String[] arrTitle = webElement.getTitle().trim().split(",");
-            String pageElement = webElement.getItemPageElement().trim();
-            if(pageElement != null){
-                List<WebElement> pageItem = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(pageElement));                              
-                if(pageItem.size() > 0){
-                    GlobalVars.TOTAL_PAGE = pageItem.size();
+//            timeSleep.sleep(5);     
+                childUrl = GlobalVars.LIB_SELENIUM.getCurrentUrl();
+                if(GlobalVars.DEBUG == 1){
+                    GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                            GlobalVars.LOG_ADDIX.formatStringContent("Reading " + childUrl));
                 }
-            } 
-            for(int iter = 0; iter < arrHref.length; iter++){                
-                List<WebElement> hrefs = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(arrHref[iter]));
-                List<WebElement> titles = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(arrTitle[iter]));
-                if(titles.size() < hrefs.size()){
-                    titles = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(arrHref[iter]));
-                }
-                
-                //Check list item link & item title
-                for(int i = 0; i < hrefs.size(); i++){
-                    String strUrl = hrefs.get(i).getAttribute("href");
-                    String strTitle = titles.get(i).getText().trim();
-                    
-                    if(!hrefs.get(i).getAttribute("href").contains(webElement.getDomain().trim())
-                            && (!hrefs.get(i).getAttribute("href").contains("tech.ascii.jp"))
-                            && (!hrefs.get(i).getAttribute("href").contains("special.nikkeibp.co.jp"))
-                            && (!hrefs.get(i).getAttribute("href").contains("https://active.nikkeibp.co.jp"))){
-                        strUrl = strUrl.replace("http://", "https://");
+            
+                String[] arrHref = webElement.getHref().trim().split(",");
+                String[] arrTitle = webElement.getTitle().trim().split(",");
+                String pageElement = webElement.getItemPageElement().trim();
+                if(pageElement != null){
+                    List<WebElement> pageItem = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(pageElement));                              
+                    if(pageItem.size() > 0){
+                        GlobalVars.TOTAL_PAGE = pageItem.size();
                     }
-                    
-                    //Origin code
-//                    if(webName.contains("itmedia")){
-//                        strUrl = hrefs.get(i).getAttribute("href");
-//                    }else{                        
-//                        if(!hrefs.get(i).getAttribute("href").contains(webElement.getDomain().trim())
-//                                && (!hrefs.get(i).getAttribute("href").contains("tech.ascii.jp"))
-//                                && (!hrefs.get(i).getAttribute("href").contains("special.nikkeibp.co.jp"))
-//                                && (!hrefs.get(i).getAttribute("href").contains("https://active.nikkeibp.co.jp"))){
-//                            strUrl = webElement.getDomain().trim() + hrefs.get(i).getAttribute("href");
-//                        }else{
-//                            strUrl = hrefs.get(i).getAttribute("href");
-//                        }
-//                    }
-                    
-                    Map<String, Boolean> myOldData = GlobalVars.MAP_OLD_DATA.get(keyword);
- 
-//                    if((!GlobalVars.arrItemUrl.contains(strUrl)) && (countItemArray < GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
-                    if((!GlobalVars.MAP_ITEM_URL.containsKey(strUrl)) && (GlobalVars.TOTAL_URL_ITEM  <= GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
-                        if((!myOldData.containsKey(strUrl)) && (!strUrl.contains("/tag/"))
-                                && (!strUrl.contains("page="))){                        
-                            GlobalVars.MAP_ITEM_URL.put(strUrl, Boolean.TRUE);
-                            WebsiteData myModelData = new WebsiteData(webName, 
-                                    GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getDomain().toString().trim(),
-                                    keyword, strUrl, strTitle);
-//                            System.out.println(i + ".Href: " + strUrl);        
-//                            System.out.println(i + ".Title: " + strTitle);
-                            GlobalVars.LIST_WEBSITE_DATA.add(myModelData);
+                } 
+                for(int iter = 0; iter < arrHref.length; iter++){                
+                    List<WebElement> hrefs = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(arrHref[iter]));
+                    List<WebElement> titles = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(arrTitle[iter]));
+                    if(titles.size() < hrefs.size()){
+                        titles = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector(arrHref[iter]));
+                    }                
+//                    System.out.println("ELEMENT: " + arrHref[iter]);
+                    //Check list item link & item title
+                    for(int i = 0; i < hrefs.size(); i++){
+                        String strUrl = "";
+                        strUrl = hrefs.get(i).getAttribute("href");                       
+                        String strTitle = "";
+                        strTitle = titles.get(i).getText().trim();
+
+                        if(strUrl.equals("") || (strUrl.equals(null))){                        
+                            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                                GlobalVars.LOG_ADDIX.formatStringError("Not found href with element " + arrHref[iter], webName + keyword + " => Skip get href with these elements"));  
+                        }else{
+                            if(!hrefs.get(i).getAttribute("href").contains(webElement.getDomain().trim())
+                                    && (!hrefs.get(i).getAttribute("href").contains("tech.ascii.jp"))
+                                    && (!hrefs.get(i).getAttribute("href").contains("special.nikkeibp.co.jp"))
+                                    && (!hrefs.get(i).getAttribute("href").contains("https://active.nikkeibp.co.jp"))){
+                                strUrl = strUrl.replace("http://", "https://");
+                            }
+
+//                        System.out.println(i + " ANA2.========================== ");
+//                        System.out.println("URL: " + strUrl);
+//                        System.out.println("Check Map ITEM URL: " + GlobalVars.MAP_ITEM_URL.containsKey(strUrl));
+//                        System.out.println("Total url item " + GlobalVars.TOTAL_URL_ITEM);
+//                        System.out.println("Check map old data " + GlobalVars.MAP_OLD_DATA.containsKey(strUrl.trim()));
+    //                        Map<String, Boolean> myOldData = GlobalVars.MAP_OLD_DATA.get(keyword);                                     
+    //                        if((!GlobalVars.arrItemUrl.contains(strUrl)) && (countItemArray < GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
+                            if((!GlobalVars.MAP_ITEM_URL.containsKey(strUrl.trim())) && (GlobalVars.TOTAL_URL_ITEM  <= GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
+                                if((!GlobalVars.MAP_OLD_DATA.containsKey(strUrl.trim())) && (!strUrl.contains("/tag/"))
+                                        && (!strUrl.contains("page="))){                        
+                                    GlobalVars.MAP_ITEM_URL.put(strUrl, Boolean.TRUE);
+                                    System.out.println(i + ".Write data to map " + strUrl);
+                                    WebsiteData myModelData = new WebsiteData(webName, 
+                                            GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getDomain().toString().trim(),
+                                            keyword, strUrl, strTitle);
+                                    GlobalVars.LIST_WEBSITE_DATA.add(myModelData);                                
+                                }                            
+                                GlobalVars.TOTAL_URL_ITEM ++;
+                            }                        
                         }
-                        GlobalVars.TOTAL_URL_ITEM ++;
-                    }
-                }                
+                    }   
                 
-            }
-//            GlobalVars.LIB_SELENIUM.close();
-            
+//            GlobalVars.LIB_SELENIUM.close();            
+            }   
         }catch(Exception ex){
             GlobalVars.ERRORS = 1;
+            System.out.println("Error read Href");
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                GlobalVars.LOG_ADDIX.formatStringError("Error JSoup read page (Offline)" + childUrl, ex.toString()));  
+                GlobalVars.LOG_ADDIX.formatStringError("Error JSoup read page (Offline) " + childUrl, ex.toString()));  
         }
-    }
+    }   
     /**
      * Read link N child item url of webpage, then save them to LIST_WEBSITE_DATA
      * @param childUrl
@@ -331,10 +328,7 @@ public class AnaGettingData {
      * @param keyword 
      */
     public void getTopNWebsiteItem(String childUrl, String webName, String keyword){
-        try{ 
-//            GlobalVars.MAP_ITEM_URL = new HashMap<>();
-//            GlobalVars.LIST_WEBSITE_DATA = new ArrayList<>();
-  
+        try{
             Document doc = Jsoup.connect(childUrl).get();
             String charset = doc.charset().toString();
             
@@ -351,8 +345,7 @@ public class AnaGettingData {
                 if(pageItem.size() > 0){
                     GlobalVars.TOTAL_PAGE = pageItem.size();
                 }
-            }            
-            
+            }   
             for(int iter = 0; iter < arrHref.length; iter++){                
                 Elements hrefs = doc.select(arrHref[iter]);
                 Elements titles = doc.select(arrTitle[iter]);
@@ -384,26 +377,32 @@ public class AnaGettingData {
                     }else{
                         strUrl = strUrl.replace(",", "");                        
                     } 
-                    Map<String, Boolean> myOldData = GlobalVars.MAP_OLD_DATA.get(keyword);
+//                    Map<String, Boolean> myOldData = GlobalVars.MAP_OLD_DATA.get(keyword);
+                    System.out.println(i + " .========================== ");
+                    System.out.println("URL: " + strUrl);
+                    System.out.println("Check Map ITEM URL: " + GlobalVars.MAP_ITEM_URL.containsKey(strUrl));
+                    System.out.println("Total url item " + GlobalVars.TOTAL_URL_ITEM);
+                    System.out.println("Check map old data " + GlobalVars.MAP_OLD_DATA.containsKey(strUrl.trim()));
  
 //                    if((!GlobalVars.arrItemUrl.contains(strUrl)) && (countItemArray < GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
                     if((!GlobalVars.MAP_ITEM_URL.containsKey(strUrl)) && (GlobalVars.TOTAL_URL_ITEM  <= GlobalVars.NUMBER_LIMIT_TOP_URL)){                        
-                        if((!myOldData.containsKey(strUrl)) && (!strUrl.contains("/tag/"))){                        
+                        if((!GlobalVars.MAP_OLD_DATA.containsKey(strUrl.trim())) && (!strUrl.contains("/tag/"))){                        
+//                        if((!myOldData.containsKey(strUrl)) && (!strUrl.contains("/tag/"))){                        
                             GlobalVars.MAP_ITEM_URL.put(strUrl, Boolean.TRUE);
                             WebsiteData myModelData = new WebsiteData(webName, 
                                     GlobalVars.MAP_WEBSITE_ELEMENTS.getWebsiteElement(webName).getDomain().toString().trim(),
                                     keyword, strUrl, strTitle);
-
-                            GlobalVars.LIST_WEBSITE_DATA.add(myModelData);
+                            GlobalVars.LIST_WEBSITE_DATA.add(myModelData);                            
                         }
                         GlobalVars.TOTAL_URL_ITEM ++;
                     }
                 }
-            }            
+            }             
         }catch(Exception ex){
             GlobalVars.ERRORS = 1;
             GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
-                GlobalVars.LOG_ADDIX.formatStringError("Error JSoup read page " + childUrl, ex.toString()));            
-        }        
+                GlobalVars.LOG_ADDIX.formatStringError("Error JSoup read page " + childUrl, ex.toString()));   
+        }
+    
     }        
 }

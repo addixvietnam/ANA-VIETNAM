@@ -5,6 +5,7 @@ import ana.controller.Automation;
 import ana.controller.CommonFunctions;
 import ana.controller.ProcessingUrl;
 import ana.controller.Project_Controller;
+import ana.controller.SeleniumAdapter;
 import ana.controller.WebsiteElement_Controller;
 import ana.controller.Website_Controller;
 import ana.model.Project;
@@ -46,7 +47,8 @@ public class GlobalVars {
     public static Project_Controller MAP_PROJECTS = new Project_Controller();
     public static Website_Controller MAP_WEBSITE = new Website_Controller();
     public static WebsiteElement_Controller MAP_WEBSITE_ELEMENTS = new WebsiteElement_Controller();
-    public static Map<String, Map<String, Boolean>> MAP_OLD_DATA;
+//    public static Map<String, Map<String, Boolean>> MAP_OLD_DATA;
+    public static Map<String, Boolean> MAP_OLD_DATA;
     public static String[] ARRAY_KEYWORD;//keywordArray    
 //    public static Map<String, WebsiteData> webDataMap = new HashMap<>();
     public static Map<String, Boolean> MAP_ITEM_URL;
@@ -57,6 +59,7 @@ public class GlobalVars {
     public static int TOTAL_PAGE = 1;
     public static int TOTAL_URL_ITEM = 0;
     public static int ERRORS = 0;
+    public static SeleniumAdapter seleniumAdapter = new SeleniumAdapter();
 
     public static void setGlobalVariables(String[] array){
 //        WORK_DIRECTORY = array[0];

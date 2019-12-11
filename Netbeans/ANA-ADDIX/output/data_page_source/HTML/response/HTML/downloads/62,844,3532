@@ -1,0 +1,7 @@
+(function() {
+	    var d = new Date();
+	    var days = 180;
+	    d.setTime(d.getTime() + (days*24*60*60*1000));
+	    var expires = "expires="+ d.toUTCString();
+	    document.cookie = "fpcid=" + "3514482450079845755_FPD" + ";" + expires + ";path=/";
+})()

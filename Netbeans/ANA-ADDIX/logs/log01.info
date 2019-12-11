@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/05 04:40:09 GMT                                               *
+*Start time:                                     2019/12/11 04:49:38 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -10,22 +10,26 @@ Finished init ana Project (read input.xlsx).
 Total time 0 hours 0 minutes 0 seconds 
 
 
-Processing data with website newswitch
+Processing data with website response
 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/newswitch/20191205_newswitch.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/response/20191211_response.xlsx
 
 
 1. Keyword AI.
-Total time 0 hours 0 minutes 23 seconds 
+Total time 0 hours 3 minutes 34 seconds 
 
 
-Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/newswitch/20191205_newswitch.xlsx
+Finished getting data from response. 
+Total time 0 hours 3 minutes 34 seconds 
 
 
-2. Keyword IoT.
-Total time 0 hours 0 minutes 34 seconds 
+Finished ANA Project. 
+Total time 0 hours 3 minutes 43 seconds 
 
+
+************************************************************************************************************************
+*End time:                                       2019/12/11 04:53:22 GMT                                               *
+************************************************************************************************************************
 
