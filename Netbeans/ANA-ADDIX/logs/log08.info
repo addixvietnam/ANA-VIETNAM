@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/11 02:59:51 GMT                                               *
+*Start time:                                     2019/12/16 06:45:11 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,34 +7,29 @@ WORKING DIRECTORY:
 
 
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 1 seconds 
+Total time 0 hours 0 minutes 0 seconds 
 
 
-Processing data with website response
+Processing data with website japancnet
 
 
-========================================================================================================================
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/japancnet/20191216_japancnet.xlsx
 
-Error JSoup read page https://response.jp/article/2019/10/11/327509.html
-
-Date: 2019/12/11 03:01:24 GMT
-   org.jsoup.HttpStatusException: HTTP error fetching URL. Status=502,
-   URL=https://response.jp/article/2019/10/11/327509.html
-========================================================================================================================
 
 1. Keyword AI.
-Total time 0 hours 1 minutes 30 seconds 
+Total time 0 hours 1 minutes 16 seconds 
 
 
-Finished getting data from response. 
-Total time 0 hours 1 minutes 30 seconds 
+Finished getting data from japancnet. 
+Total time 0 hours 1 minutes 16 seconds 
 
 
 Finished ANA Project. 
-Total time 0 hours 1 minutes 40 seconds 
+Total time 0 hours 1 minutes 22 seconds 
 
 
 ************************************************************************************************************************
-*End time:                                       2019/12/11 03:01:32 GMT                                               *
+*End time:                                       2019/12/16 06:46:33 GMT                                               *
 ************************************************************************************************************************
 

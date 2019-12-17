@@ -5,10 +5,16 @@
  */
 package ana.controller;
 
+import ana.GlobalVars;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
@@ -24,7 +30,7 @@ public class DownloadHref {
     private String folderSupportLinkDownload;
     
     public static void savePage(String linkDownload, String folderSupportLinkDownload, 
-            String folderSourceDownload, String htmlContent) throws InterruptedException{
+            String folderSourceDownload, String htmlContent, String webName, String keyword) throws InterruptedException, UnsupportedEncodingException{
         //Check folder exist, if not exist create it
         File isFolderSrcDownload = new File(folderSourceDownload);
         File isFolderSupportLinkDownload = new File(folderSupportLinkDownload);
@@ -48,43 +54,62 @@ public class DownloadHref {
         int numOfThreads = 4;
         Semaphore sem = new Semaphore(numOfThreads);
         ArrayList<Thread> subThreads = new ArrayList<>();
+        final String folderExtension = URLDecoder.decode(folderSupportLinkDownload, "UTF-8") ;
         for (int index = 0 ; index < srcs.length; index++) {
-            final int fIndex = index;
-            final String fSrc = srcs[index];
-            Thread thread = new Thread(() -> {
-                try {
-                    sem.acquire();
-                    download(jsoupAdapter, fIndex, fSrc, folderSupportLinkDownload);
-                } catch (InterruptedException ex) {                    
-                    System.out.println("Downloading error " + ex.toString());                    
-                } finally {
-                    sem.release();
-                }
-            });
-            thread.start();
-            subThreads.add(thread);
+            try {
+                final int fIndex = index;
+                final String fSrc = URLDecoder.decode(srcs[index], "UTF-8") ;
+                Thread thread = new Thread(() -> {
+                    try {
+                        sem.acquire();
+                        download(jsoupAdapter, fIndex, fSrc, folderExtension);
+                    } catch (InterruptedException ex) {
+                        System.out.println("Downloading InterruptedException error " + ex.toString());
+                        GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                            GlobalVars.LOG_ADDIX.formatStringError("Downloading InterruptedException error" , ex.toString())); 
+                    } finally {
+                        sem.release();
+                    }
+                });
+                thread.start();
+                subThreads.add(thread);
+            } catch (UnsupportedEncodingException ex) {
+                throw ex;
+            }
         }
         for (Thread thread : subThreads) {
               try {
-                  thread.join();
+                    thread.join();
               } catch (InterruptedException ex) {
-                  System.out.println("Joining thread download error " + ex.toString());                  
+                    System.out.println("Joining thread download error " + ex.toString());     
+                    GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                        GlobalVars.LOG_ADDIX.formatStringError("Joining thread download error" , ex.toString()));                     
               }
         }
+        // \/?:*"<>|
         String htmlName = jsoupAdapter.getTitle()
-                .replaceAll("\\|","")
-                .replaceAll("\\?", "")
-                .replaceAll("<", "")
-                .replaceAll(">", "")
-                .replaceAll(":", "")
+                .replace("\\\\", "_")
+                .replaceAll("\\/", "_")
+                .replaceAll(":", "_")
+                .replaceAll("\\?", "_")                
+                .replaceAll("\\|","_")                
+                .replaceAll("<", "_")
+                .replaceAll(">", "_")
+                .replaceAll("\\*", "_")
+                .replace("\"", "_")
                 .replaceAll("  ", "")
                 .replaceAll(" ", "_");
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(folderSourceDownload + File.separator + htmlName + ".html"))) {
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(folderSourceDownload + File.separator + htmlName + ".html", true), StandardCharsets.UTF_8))){
+//                BufferedWriter writer = new BufferedWriter(new FileWriter(folderSourceDownload + File.separator + htmlName + ".html"))) {
             writer.write(jsoupAdapter.getHtml());
-        writer.close();
+            writer.close();
         } catch (IOException ex) {
-            System.out.println("Writing file download error " + ex.toString());            
+            System.out.println("Writing file html download error " + ex.toString());            
+            GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                GlobalVars.LOG_ADDIX.formatStringError("Writing file html download error", linkDownload  + "\n" + ex.toString())); 
+            String bugLinks = webName + "," + keyword + "," + linkDownload;
+            LinkErrors.writeLinkErrors(GlobalVars.WORK_DIRECTORY + "/output/errorLinks.txt", bugLinks);
         }
    }
     
@@ -98,7 +123,15 @@ public class DownloadHref {
             pattern = src.substring(0, src.lastIndexOf("?")) + "\\" + src.substring(src.lastIndexOf("?"));
         String fileName = fullFileName.substring(fullFileName.lastIndexOf("\\") + 1);
         {
-            jsoupAdapter.updateElement(elementIndex, "../Downloads/" + fileName);
+            int lastIndex = downloadDir.lastIndexOf("\\");
+            if(lastIndex > 0){
+                lastIndex ++;
+            }else if(lastIndex < 0){
+                lastIndex = downloadDir.lastIndexOf("/");
+            }
+            String nameFolder = downloadDir.substring(lastIndex, downloadDir.length());
+            String strFileDownload = "../" + nameFolder + "/" + fileName;
+            jsoupAdapter.updateElement(elementIndex, strFileDownload);            
         }
    }    
 

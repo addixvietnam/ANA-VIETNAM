@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/11 05:01:00 GMT                                               *
+*Start time:                                     2019/12/17 04:10:28 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -10,26 +10,26 @@ Finished init ana Project (read input.xlsx).
 Total time 0 hours 0 minutes 1 seconds 
 
 
-Processing data with website response
+Processing data with website ascii
 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/response/20191211_response.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ascii/20191217_ascii.xlsx
 
 
-1. Keyword AI.
-Total time 0 hours 3 minutes 19 seconds 
+1. Keyword IoT.
+Total time 0 hours 5 minutes 31 seconds 
 
 
-Finished getting data from response. 
-Total time 0 hours 3 minutes 19 seconds 
+Finished getting data from ascii. 
+Total time 0 hours 6 minutes 4 seconds 
 
 
 Finished ANA Project. 
-Total time 0 hours 3 minutes 28 seconds 
+Total time 0 hours 6 minutes 18 seconds 
 
 
 ************************************************************************************************************************
-*End time:                                       2019/12/11 05:04:29 GMT                                               *
+*End time:                                       2019/12/17 04:16:47 GMT                                               *
 ************************************************************************************************************************
 

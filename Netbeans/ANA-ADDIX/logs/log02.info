@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/11 04:49:16 GMT                                               *
+*Start time:                                     2019/12/17 04:05:53 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,44 +7,37 @@ WORKING DIRECTORY:
 
 
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 1 seconds 
+Total time 0 hours 0 minutes 0 seconds 
 
 
-Processing data with website response
+Processing data with website ascii
+
+
+Writing data to output file 
 
 
 ========================================================================================================================
 
-Error JSoup read page (Offline) https://response.jp/search.html?q=AI
+Error Write Output To Excel File 
 
-Date: 2019/12/11 04:49:23 GMT
-   org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-
-   from disconnected: received Inspector.detached event
-
-     (Session info: chrome=79.0.3945.79)
-
-   Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-
-   System info: host: 'ADDIX-02-PC', ip: '192.168.33.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0',
-   java.version: '1.8.0_211'
-   Driver info: org.openqa.selenium.chrome.ChromeDriver
-
-   Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.79, chrome:
-   {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\ADDIX0~1.DES\AppDa...},
-   goog:chromeOptions: {debuggerAddress: localhost:57929}, javascriptEnabled: true, networkConnectionEnabled: false,
-   pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true,
-   strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior:
-   dismiss and notify}
-   Session ID: 7fc1b55b663012572d6307b35672e270
+Date: 2019/12/17 04:06:29 GMT
+   java.io.FileNotFoundException: 
 
 ========================================================================================================================
 
-1. Keyword AI.
-Total time 0 hours 0 minutes 1 seconds 
+1. Keyword IoT.
+Total time 0 hours 0 minutes 26 seconds 
 
 
-Finished getting data from response. 
-Total time 0 hours 0 minutes 1 seconds 
+Finished getting data from ascii. 
+Total time 0 hours 0 minutes 26 seconds 
 
+
+Finished ANA Project. 
+Total time 0 hours 0 minutes 40 seconds 
+
+
+************************************************************************************************************************
+*End time:                                       2019/12/17 04:06:33 GMT                                               *
+************************************************************************************************************************
 

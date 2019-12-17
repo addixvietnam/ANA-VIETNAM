@@ -1,5 +1,6 @@
 package ana.controller;
 
+import ana.GlobalVars;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,6 +18,7 @@ public class JsoupAdapter {
     private Document document;
     private String url; //domain url
     private Elements srcElements = new Elements();    
+    private static final String AVAILABLE_SRC = "Avaiablabe";
     /**
      * Connect to url then get domain to prepare for download page
      * @param url
@@ -91,11 +93,15 @@ public class JsoupAdapter {
             if (null == src){
                 continue;
             }                
-            if (listSrc.contains(src) || src.isEmpty()) // || !src.contains("/")) || src.contains("https://apis.google.com"))
+            if (src.isEmpty()) // || listSrc.contains(src) || !src.contains("/")) || src.contains("https://apis.google.com"))
             {
                 continue;
             }
-            listSrc.add(src);
+            if (listSrc.contains(src)) {
+                listSrc.add(src+AVAILABLE_SRC);
+            } else {
+                listSrc.add(src);
+            }            
             srcElements.add(element);
 //            System.out.println(src);            
         }
@@ -105,9 +111,13 @@ public class JsoupAdapter {
             image = getCorrectUrl(image);
             if (null == image)
                 continue;
-            if (listSrc.contains(image) || image.isEmpty())
+            if (image.isEmpty())
                 continue;
-            listSrc.add(image);
+            if (listSrc.contains(image)) {
+                listSrc.add(image+AVAILABLE_SRC);
+            } else {
+                listSrc.add(image);
+            }
             srcElements.add(element);
 //            System.out.println(image);
         }
@@ -120,7 +130,11 @@ public class JsoupAdapter {
                 continue;
             if (listSrc.contains(css) || !css.contains(".css"))
                 continue;
-            listSrc.add(css);
+            if (listSrc.contains(css)) {
+                listSrc.add(css+AVAILABLE_SRC);
+            } else {
+                listSrc.add(css);
+            }
             srcElements.add(element);
 //            System.out.println(css);
         }      
@@ -135,8 +149,9 @@ public class JsoupAdapter {
         String fileName = null;
         try {
             URL urlObject = new URL(url);
-            fileName = urlObject.getFile();
+            fileName = urlObject.getFile();            
             fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
+                    
             if (fileName.isEmpty())  {
                 fileName = null;
             }
@@ -153,8 +168,20 @@ public class JsoupAdapter {
      * @return 
      */
     public String download(String url, String outputFile) {
+        if (url.contains(AVAILABLE_SRC)) {
+            String fileName = getFileName(url.replaceAll(AVAILABLE_SRC, ""));
+            String fullFileName = outputFile + File.separator + fileName;
+            if (fileName.contains("?")) {
+                fileName = fileName.substring(0, fileName.lastIndexOf("?"));
+                fullFileName = outputFile + File.separator +  fileName;
+            }
+            return fullFileName;
+        }        
         String correctURL = getCorrectUrl(url);
         String fileName = getFileName(url);
+        if(fileName == null){
+            return null;
+        }
         String fullFileName = outputFile + File.separator + fileName;
         if (fileName.contains("?")) {
             fileName = fileName.substring(0, fileName.lastIndexOf("?"));
@@ -176,7 +203,11 @@ public class JsoupAdapter {
                 .bodyAsBytes();
                 outputStreamFile.write(data);
         } catch (IOException ex) {
-            Logger.getLogger(JsoupAdapter.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(JsoupAdapter.class.getName()).log(Level.SEVERE, null, ex);
+            if(GlobalVars.DEBUG == 1){
+                GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
+                            GlobalVars.LOG_ADDIX.formatStringError("File error " ,correctURL + "\n" + ex.toString())); 
+            }
             return null;
         }
         return fullFileName;

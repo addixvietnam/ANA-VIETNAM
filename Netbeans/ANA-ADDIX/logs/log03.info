@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/11 04:46:48 GMT                                               *
+*Start time:                                     2019/12/17 03:57:34 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,6 +7,29 @@ WORKING DIRECTORY:
 
 
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 1 seconds 
+Total time 0 hours 0 minutes 0 seconds 
 
+
+Processing data with website ascii
+
+
+Writing data to output file D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ascii/20191217_ascii.xlsx
+
+
+1. Keyword AI.
+Total time 0 hours 1 minutes 8 seconds 
+
+
+Finished getting data from ascii. 
+Total time 0 hours 1 minutes 8 seconds 
+
+
+Finished ANA Project. 
+Total time 0 hours 1 minutes 18 seconds 
+
+
+************************************************************************************************************************
+*End time:                                       2019/12/17 03:58:52 GMT                                               *
+************************************************************************************************************************
 

@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/11 04:49:38 GMT                                               *
+*Start time:                                     2019/12/17 04:08:26 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,29 +7,39 @@ WORKING DIRECTORY:
 
 
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 0 seconds 
+Total time 0 hours 0 minutes 1 seconds 
 
 
-Processing data with website response
+Processing data with website ascii
 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/response/20191211_response.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ascii/20191217_ascii.xlsx
 
 
-1. Keyword AI.
-Total time 0 hours 3 minutes 34 seconds 
+========================================================================================================================
+
+Error Write Output To Excel File D:\MyProjects\Sources\11.
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/ascii/20191217_ascii.xlsx
+Date: 2019/12/17 04:09:04 GMT
+   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
+   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_page_source\HTML\ascii\20191217_ascii.xlsx (The process
+   cannot access the file because it is being used by another process)
+========================================================================================================================
+
+1. Keyword IoT.
+Total time 0 hours 0 minutes 27 seconds 
 
 
-Finished getting data from response. 
-Total time 0 hours 3 minutes 34 seconds 
+Finished getting data from ascii. 
+Total time 0 hours 0 minutes 27 seconds 
 
 
 Finished ANA Project. 
-Total time 0 hours 3 minutes 43 seconds 
+Total time 0 hours 0 minutes 41 seconds 
 
 
 ************************************************************************************************************************
-*End time:                                       2019/12/11 04:53:22 GMT                                               *
+*End time:                                       2019/12/17 04:09:08 GMT                                               *
 ************************************************************************************************************************
 

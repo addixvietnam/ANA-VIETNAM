@@ -9,6 +9,7 @@ import ana.model.WebsiteElement;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -127,6 +128,7 @@ public class AnaProcessing {
         String startProjectTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
         GlobalVars.LIB_SELENIUM.setChromeDriver();
         GlobalVars.seleniumAdapter.setDriver(GlobalVars.LIB_SELENIUM.getSeleniumDriver());
+        GlobalVars.seleniumAdapter.setMaximizeWindow();
         writeStatusDownload(GlobalVars.WORK_DIRECTORY + "\\output\\download.txt", 0);
         for (Map.Entry<String, Website> presentWebsite : GlobalVars.MAP_WEBSITE.getWebsites().entrySet()) {            
             //Read all old url item of 1 website from data_storage
@@ -146,11 +148,20 @@ public class AnaProcessing {
                     Date presentDate = new Date();
                     String outputExcelNameFile = GlobalVars.WORK_DIRECTORY + "/output/data_page_source/HTML/" + webName.toLowerCase() +
                             "/" + dateFormat.format(presentDate) + "_" + webName + ".xlsx";
-                    GlobalVars.LIB_COMMON.deleteFile(outputExcelNameFile);
-                    //New output excel file
-                    strOutExcelFile = GlobalVars.LIB_COMMON.coppyExcelFile(GlobalVars.WORK_DIRECTORY + "/input/output.xlsx", 
-                                                GlobalVars.WORK_DIRECTORY + "/output/data_page_source/HTML/" + webName.toLowerCase(), 
-                                                dateFormat.format(presentDate) + "_" + webName + ".xlsx" );
+                    
+//                    GlobalVars.LIB_COMMON.deleteFile(outputExcelNameFile);
+
+                    File testExcelFile = new File(outputExcelNameFile);
+                    if(!testExcelFile.exists()){
+                        //New output excel file
+                        strOutExcelFile = GlobalVars.LIB_COMMON.coppyExcelFile(GlobalVars.WORK_DIRECTORY + "/input/output.xlsx", 
+                                                    GlobalVars.WORK_DIRECTORY + "/output/data_page_source/HTML/" + webName.toLowerCase(), 
+                                                    dateFormat.format(presentDate) + "_" + webName + ".xlsx" );                        
+                    }else{
+                        //New output excel file
+                        strOutExcelFile = outputExcelNameFile;                        
+                    }                    
+
                 }catch(Exception ex){
                     GlobalVars.LOG_ADDIX.writeLog(GlobalVars.LOG_FILE_NAME, 
                             GlobalVars.LOG_ADDIX.formatStringError("Copy file " + webName, ex.toString()));   
@@ -240,7 +251,7 @@ public class AnaProcessing {
                             String htmlDir = GlobalVars.WORK_DIRECTORY + "\\output\\data_page_source\\HTML\\" + webName + "\\HTML\\" + GlobalVars.ARRAY_KEYWORD[i].trim();
                             String downloadsDir = GlobalVars.WORK_DIRECTORY + "\\output\\data_page_source\\HTML\\" + webName + "\\HTML\\downloads";
                             
-                            downloadAddix(downloadedLinks, downloadsDir, htmlDir);                            
+                            downloadAddix(downloadedLinks, downloadsDir, htmlDir, webName, GlobalVars.ARRAY_KEYWORD[i]);                            
                         }
 
                         String endKeywordTime = Utilities.getDateTime(GlobalVars.LIB_DATETIME_FORMAT, GlobalVars.LIB_TIMEZONE);
@@ -265,7 +276,7 @@ public class AnaProcessing {
         System.out.println("Finished program");
         
     }   
-    public void downloadAddix(Map downloadedLinks, String downloadsDir, String htmlDir){
+    public void downloadAddix(Map downloadedLinks, String downloadsDir, String htmlDir, String webName, String keyword){
         for(int iterDownload = 0; iterDownload < GlobalVars.LIST_WEBSITE_DATA.size(); iterDownload++){
             String url = GlobalVars.LIST_WEBSITE_DATA.get(iterDownload).getUrlArticle();
             String html = null;
@@ -279,8 +290,10 @@ public class AnaProcessing {
                 downloadedLinks.put(url, html);
             }
             try {
-                DownloadHref.savePage(url, downloadsDir, htmlDir, html);
+                DownloadHref.savePage(url, downloadsDir, htmlDir, html, webName, keyword);
             } catch (InterruptedException ex) {
+                Logger.getLogger(AnaProcessing.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (UnsupportedEncodingException ex) {
                 Logger.getLogger(AnaProcessing.class.getName()).log(Level.SEVERE, null, ex);
             }
 
@@ -296,7 +309,7 @@ public class AnaProcessing {
             FileWriter writer = new FileWriter(fileName, false);
             writer.write(Integer.toString(status));
             writer.close();
-            System.out.println("File name: " + fileName);
+//            System.out.println("File name: " + fileName);
         } catch (IOException e) {
             e.printStackTrace();
         } 

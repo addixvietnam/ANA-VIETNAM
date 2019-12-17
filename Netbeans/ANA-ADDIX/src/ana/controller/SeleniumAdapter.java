@@ -14,6 +14,10 @@ public class SeleniumAdapter {
         this.driver = driver;
     }
     
+    public void setMaximizeWindow(){
+        this.driver.manage().window().maximize();
+    }
+    
     /**
      * Connect to website by URL
      * @param URL : URL to target website

@@ -221,13 +221,13 @@ public class AnaGettingData {
                 if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.cssSelector("#header > ul > li.entry > a")).size() != 0){
                     GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.cssSelector("#header > ul > li.entry > a")).click();
                     timeSleep.sleep(2);
-                    //Check login by account of nikkan
-                    if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.xpath("//*[@id=\"UserLicenseLoginForm\"]")).size() != 0){
+                    //Check login by account of nikkan   //*[@id=\"UserLicenseLoginForm\"]/div/input
+                    if(GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElements(By.xpath("//*[@id=\"UserLicenseAddForm\"]")).size() != 0){
                         WebElement email = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"UserLicenseUsername\"]"));
                         WebElement password = GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"UserLicensePassword\"]"));
                         email.sendKeys("quoc.nguyen@addix.vn");
                         password.sendKeys("addix12");
-                        GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"UserLicenseLoginForm\"]/div/input")).click();
+                        GlobalVars.LIB_SELENIUM.getSeleniumDriver().findElement(By.xpath("//*[@id=\"UserLicenseAddForm\"]/div/table/tbody/tr[3]/td/input[3]")).click();
                         timeSleep.sleep(3);
                     } 
                 }
@@ -235,10 +235,18 @@ public class AnaGettingData {
             else{
                 if(pageNo == 1){
                     GlobalVars.LIB_SELENIUM.connect(childUrl);   
-                    if((webName.trim().equals("ascii")) || (webName.trim().equals("japancnet")) 
+                    if((webName.trim().equals("ascii"))  
                         || (webName.trim().equals("monoist")) || (webName.trim().equals("wired"))){
                         timeSleep.sleep(3);
                         //Must click sort
+                        GlobalVars.LIB_SELENIUM.click("gsc-option-selector");
+                        GlobalVars.LIB_SELENIUM.click("gsc-option-menu");
+                    }else if(webName.trim().equals("japancnet")){
+                        timeSleep.sleep(5);
+                        if((keyword.equals("シェアリングエコノミー")) || (keyword.equals("デジタルサイネージ"))){
+                            timeSleep.sleep(3);
+                        }
+                        //Must click sort                        
                         GlobalVars.LIB_SELENIUM.click("gsc-option-selector");
                         GlobalVars.LIB_SELENIUM.click("gsc-option-menu");
                     }else if(webName.trim().equals("techcrunch")){

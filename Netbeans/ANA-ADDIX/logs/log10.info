@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-*Start time:                                     2019/12/10 04:55:53 GMT                                               *
+*Start time:                                     2019/12/16 06:16:23 GMT                                               *
 ************************************************************************************************************************
 
 WORKING DIRECTORY:
@@ -7,39 +7,29 @@ WORKING DIRECTORY:
 
 
 Finished init ana Project (read input.xlsx). 
-Total time 0 hours 0 minutes 0 seconds 
+Total time 0 hours 0 minutes 1 seconds 
 
 
-Processing data with website response
+Processing data with website japancnet
 
 
 Writing data to output file D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/response/20191210_response.xlsx
+ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_page_source/HTML/japancnet/20191216_japancnet.xlsx
 
 
-========================================================================================================================
-
-Error Write Output To Excel File D:\MyProjects\Sources\11.
-ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX/output/data_storage/response.xlsx
-Date: 2019/12/10 04:57:01 GMT
-   java.io.FileNotFoundException: D:\MyProjects\Sources\11.
-   ChangeCodeANA\ANA-VIETNAM\Netbeans\ANA-ADDIX\output\data_storage\response.xlsx (The process cannot access the file
-   because it is being used by another process)
-========================================================================================================================
-
-1. Keyword 医療.
-Total time 0 hours 1 minutes 2 seconds 
+1. Keyword AI.
+Total time 0 hours 0 minutes 12 seconds 
 
 
-Finished getting data from response. 
-Total time 0 hours 1 minutes 2 seconds 
+Finished getting data from japancnet. 
+Total time 0 hours 0 minutes 12 seconds 
 
 
 Finished ANA Project. 
-Total time 0 hours 1 minutes 12 seconds 
+Total time 0 hours 0 minutes 17 seconds 
 
 
 ************************************************************************************************************************
-*End time:                                       2019/12/10 04:57:05 GMT                                               *
+*End time:                                       2019/12/16 06:16:41 GMT                                               *
 ************************************************************************************************************************
 

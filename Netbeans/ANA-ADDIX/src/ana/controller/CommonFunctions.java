@@ -48,5 +48,7 @@ public class CommonFunctions extends AddixFile{
         this.currentPath = currentPath;
     }
     
-    
+    public void write2EndOutputData(String fileName){
+        
+    }
 }
